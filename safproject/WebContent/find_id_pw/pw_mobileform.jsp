@@ -37,10 +37,10 @@
                 <span id="searchID">
                    <div style="height:70px;margin-top:10px">
                     <div class="searchTypeBtnBox">
-                         <button id="searchIdBtn" type="button" class="btn btn-lg btn-default searchTypeBtn" style="color:#9a9a9a;" onclick="location.href='id_mobileform.html'" onclick="location.href='id_emailform.html'">아이디 찾기</button>
+                         <button id="searchIdBtn" type="button" class="btn btn-lg btn-default searchTypeBtn" style="color:#9a9a9a;" onclick="location.href='id_mobileform.jsp'" onclick="location.href='id_emailform.jsp'">아이디 찾기</button>
                     </div>
                     <div class="searchTypeBtnBox">
-                        <button id="searchPwBtn" type="button" class="btn btn-lg btn-default searchTypeBtn" style="border-top:1px solid #019267;;cursor:default;" onclick="location.href='pw_mobileform.html'" onclick="location.href='pw_emailform.html'" >비밀번호 찾기</button>
+                        <button id="searchPwBtn" type="button" class="btn btn-lg btn-default searchTypeBtn" style="border-top:1px solid #019267;;cursor:default;" onclick="location.href='pw_mobileform.jsp'" onclick="location.href='pw_emailform.jsp'" >비밀번호 찾기</button>
                     </div>
                 </div>
                 </span>
@@ -48,8 +48,8 @@
                 <div>
                     <div id="findTypeRdoBoxParent" style="border-top:1px solid grey">
                         <div id="findTypeRdoBox" class="findTypeRdoBox">
-                              <span class="pr10 roundRdo"><input id="findBypMobile" type="radio" name="searchFindType" value="FindBypMobile" checked="checked" onclick="location.href='pw_mobileform.html'"><label for="findByMobile">휴대폰으로 임시 비밀번호 받기</label></span>
-                            <span class="roundRdo"><input id="findBypEMail" type="radio" name="searchFindType" value="FindBypEMail" onclick="location.href='pw_emailform.html'"><label for="findByEMail">이메일로 임시 비밀번호 받기</label></span>
+                              <span class="pr10 roundRdo"><input id="findBypMobile" type="radio" name="searchFindType" value="FindBypMobile" checked="checked" onclick="location.href='pw_mobileform.jsp'"><label for="findByMobile">휴대폰으로 임시 비밀번호 받기</label></span>
+                            <span class="roundRdo"><input id="findBypEMail" type="radio" name="searchFindType" value="FindBypEMail" onclick="location.href='pw_emailform.jsp'"><label for="findByEMail">이메일로 임시 비밀번호 받기</label></span>
                         </div>
                     </div>
                     <table class="pop_tableV2">

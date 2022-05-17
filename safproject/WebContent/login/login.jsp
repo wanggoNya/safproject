@@ -43,8 +43,8 @@
 						</label>
 				</div>
 				<div class="col align-self-center text-right">
-					<a class="find-id" href="../find_id_pw/id_mobileform.html" style="color:#019267">아이디 찾기</a>
-					<a class="find-pw" href="../find_id_pw/pw_mobileform.html" style="color:#019267">비밀번호 찾기</a>
+					<a class="find-id" href="${pageContext.request.contextPath}/find_id_pw/id_mobileform.jsp" style="color:#019267">아이디 찾기</a>
+					<a class="find-pw" href="${pageContext.request.contextPath}/find_id_pw/pw_mobileform.jsp" style="color:#019267">비밀번호 찾기</a>
 				</div>
 			</div>
 		</div>
@@ -57,7 +57,7 @@
 	<footer class="login-footer">
 		<p class="question-signin">
 			아직 회원이 아니신가요?
-			<a class="g-font-weight-500" href="../join/join.html">회원가입</a>
+			<a class="g-font-weight-500" href="${pageContext.request.contextPath}/join/join.jsp">회원가입</a>
 		</p>
 
 	</footer>
