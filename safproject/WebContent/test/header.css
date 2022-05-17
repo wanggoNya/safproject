@@ -4,16 +4,16 @@ div {
 
 }
 
-header {
+header.u-header {
     display: block;
 }
 
-a {
+a#a {
     text-decoration: none !important;
     /* background-color: ; */
 }
 
-ul.ul {
+ul {
     display: list-item;
     text-align: -webkit-match-parent;
 }
@@ -118,7 +118,7 @@ ul.ul {
 }
 
 /* 탑바 레이아웃 4 */
-.row-head {
+.row {
     display: flex;
     flex-wrap: wrap;
     margin-right: 0px;

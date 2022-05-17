@@ -6,8 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>마이페이지</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/
-    /mypage/mypage.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/mypage/mypage.css">
 </head>
 
 <body>
@@ -32,10 +31,10 @@
     <section class="mypage-menu">
         <div>
             <ul class="menu-wrap">
-                <li class="nav-item"><a class="nav-link" href="mypage_profile.html">내 프로필 보기</a></li>
-                <li class="nav-item"><a class="nav-link" href="mypage_modify.html">회원정보 수정</a></li>
-                <li class="nav-item"><a class="nav-link" href="mypage_pw.html">비밀번호 변경</a></li>
-                <li class="nav-item"><a class="nav-link" href="mypage_leave.html">회원 탈퇴</a></li>
+                <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/mypage/mypage_profile.jsp">내 프로필 보기</a></li>
+                <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/mypage/mypage_modify.jsp">회원정보 수정</a></li>
+                <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/mypage/mypage_pw.jsp">비밀번호 변경</a></li>
+                <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/mypage/mypage_leave.jsp">회원 탈퇴</a></li>
             </ul>
         </div>
     </section>

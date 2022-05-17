@@ -22,8 +22,8 @@
 			<dataSource type="POOLED">
 				<property name="driver" value="com.mysql.cj.jdbc.Driver"/>
 				<property name="url" value="jdbc:mysql://localhost:3306/streetanimalfinder"/>
-				<property name="username" value="root"/>
-				<property name="password" value="0000"/>
+				<property name="username" value="saf"/>
+				<property name="password" value="220516animal"/>
 			</dataSource>
 		</environment>
 	</environments>
