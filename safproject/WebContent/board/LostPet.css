@@ -160,7 +160,6 @@ body {
 
 .row {
     display: -ms-flexbox;
-    display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-right: -15px;
@@ -322,10 +321,6 @@ body {
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     padding: 1rem;
-}
-
-.p-0 {
-    padding: 2rem !important;
 }
 
 .card-img-top {
@@ -820,10 +815,12 @@ element.style {
     border: 1px solid #000;
 } */
 div.left {
-    width: 55%;
+    width: 63%;
     float: left;
     box-sizing: border-box;
-    padding: 50px
+    padding: 50px;
+    
+    /* margin: 0; */
     
     /* background: #ff0; */
 }
@@ -831,8 +828,8 @@ div.right {
     width: 35%;
     float: right;
     box-sizing: border-box;
-    padding: 40px
-    
+    padding: 30px;
+    height: 761px;
     
     /* background: #0ff; */
 }
