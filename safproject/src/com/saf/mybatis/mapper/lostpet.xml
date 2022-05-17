@@ -8,9 +8,9 @@
 	</select> -->
 	
 	<select id="selectAll" parameterType="map" resultType="lostpetDTO">
-		select boardNumber, boardTitle, boardContent, memberId, boardDate, readCount 
-		from tbl_board b join tbl_member m 
-		on b.memberNumber = m.memberNumber
+		select boardNumber, boardTitle, boardContent, userId, boardDate, readCount 
+		from tbl_board b join tbl_user u 
+		on b.userNumber = u.userNumber
 		order by 1 desc limit #{startRow}, #{rowCount}
 	</select>
 	
@@ -21,9 +21,9 @@
 	
 	<!-- 게시글 상세보기(전체 정보 조회) -->
 	<select id="selectDetail" parameterType="_int" resultType="boardDTO">
-		select boardNumber, boardTitle, boardContent, b.memberNumber, memberId 
-		from tbl_board b join tbl_member m
-		on  b.memberNumber = m.memberNumber and boardNumber = #{boardNumber}
+		select boardNumber, boardTitle, boardContent, b.userNumber, userId 
+		from tbl_board b join tbl_user u
+		on  b.userNumber = u.userNumber and boardNumber = #{boardNumber}
 	</select>
 	
 	<!-- 조회수 -->
@@ -41,8 +41,8 @@
 	
 	<!-- 게시글 작성 -->
 	<insert id="insert" parameterType="boardVO">
-		insert into tbl_board (boardTitle, boardContent, memberNumber, boardDate) 
-		values(#{boardTitle}, #{boardContent}, #{memberNumber}, now())
+		insert into tbl_board (boardTitle, boardContent, userNumber, boardDate) 
+		values(#{boardTitle}, #{boardContent}, #{userNumber}, now())
 	</insert>
 	
 	<!-- 게시글 삭제 -->
@@ -59,16 +59,16 @@
 	
 	<!-- 댓글 목록 -->
 	<select id="selectReplies" parameterType="_int" resultType="boardReplyDTO">
-		select replyNumber, boardNumber, r.memberNumber, memberId, replyContent 
-		from tbl_reply r join tbl_member m 
-		on r.memberNumber = m.memberNumber and boardNumber = #{boardNumber}
+		select replyNumber, boardNumber, r.userNumber, userId, replyContent 
+		from tbl_reply r join tbl_user u 
+		on r.userNumber = u.userNumber and boardNumber = #{boardNumber}
 		order by 1 desc
 	</select>
 	
 	<!-- 댓글 등록 -->
 	<insert id="insertReply" parameterType="boardReplyVO">
-		insert into tbl_reply (boardNumber, memberNumber, replyContent) 
-		values(#{boardNumber}, #{memberNumber}, #{replyContent})
+		insert into tbl_reply (boardNumber, userNumber, replyContent) 
+		values(#{boardNumber}, #{userNumber}, #{replyContent})
 	</insert>
 	
 	<!-- 댓글 삭제 -->

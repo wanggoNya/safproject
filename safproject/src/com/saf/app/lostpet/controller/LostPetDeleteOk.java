@@ -1,4 +1,4 @@
-package com.saf.app.board.controller;
+package com.saf.app.lostpet.controller;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,7 +13,7 @@ import com.boardMVC.app.board.dao.BoardDAO;
 import com.boardMVC.app.board.dao.FilesDAO;
 import com.boardMVC.app.board.vo.FilesVO;
 
-public class BoardDeleteOk implements Action{
+public class LostPetDeleteOk implements Action{
 	@Override
 	public ActionForward execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		
