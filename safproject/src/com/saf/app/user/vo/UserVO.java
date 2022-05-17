@@ -1,6 +1,6 @@
 package com.saf.app.user.vo;
 
-public class MemberVO {
+public class UserVO {
 	private int userNumber;
 	private String userId;
 	private String userPw;

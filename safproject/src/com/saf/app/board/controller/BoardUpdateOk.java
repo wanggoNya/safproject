@@ -28,7 +28,7 @@ public class BoardUpdateOk implements Action {
 		FilesDAO fDao = new FilesDAO();
 		ActionForward af = new ActionForward();
 		
-		String uploadFolder = "D:\\aigb_0900_hds\\jsp\\workspace\\boardMVC\\WebContent\\upload";
+		String uploadFolder = "D:\\aigb_0900_hds\\jsp\\workspace\\boardMVC\\WebContent\\upload";//변경할것
 		int fileSize = 1024 * 1024 * 5; //5M
 		int boardNumber = 0, page = 0;
 		

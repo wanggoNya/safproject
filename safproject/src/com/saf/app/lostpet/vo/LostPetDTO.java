@@ -6,8 +6,8 @@ public class LostPetDTO {
 	private int boardNumber;
 	private String boardTitle;
 	private String boardContent;
-	private int memberNumber;
-	private String memberId;
+	private int userNumber;
+	private String userId;
 	private String boardDate;
 	private int readCount;
 	
@@ -15,7 +15,7 @@ public class LostPetDTO {
 
 	public LostPetDTO(LostPetVO boardVO) {
 		super();
-		this.memberNumber = boardVO.getMemberNumber();
+		this.userNumber = boardVO.getUserNumber();
 		this.boardNumber = boardVO.getBoardNumber();
 		this.boardTitle = boardVO.getBoardTitle();
 		this.boardContent = boardVO.getBoardContent();
@@ -47,20 +47,20 @@ public class LostPetDTO {
 		this.boardContent = boardContent;
 	}
 
-	public int getMemberNumber() {
-		return memberNumber;
+	public int getUserNumber() {
+		return userNumber;
 	}
 
-	public void setMemberNumber(int memberNumber) {
-		this.memberNumber = memberNumber;
+	public void setUserNumber(int userNumber) {
+		this.userNumber = userNumber;
 	}
 
-	public String getMemberId() {
-		return memberId;
+	public String getUserId() {
+		return userId;
 	}
 
-	public void setMemberId(String memberId) {
-		this.memberId = memberId;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 
 	public String getBoardDate() {

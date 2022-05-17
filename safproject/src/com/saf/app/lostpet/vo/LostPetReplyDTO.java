@@ -3,8 +3,8 @@ package com.saf.app.lostpet.vo;
 public class LostPetReplyDTO {
 	private int replyNumber;
 	private int boardNumber;
-	private int memberNumber;
-	private String memberId;
+	private int userNumber;
+	private String userId;
 	private String replyContent;
 	
 	public LostPetReplyDTO() {;}
@@ -25,20 +25,20 @@ public class LostPetReplyDTO {
 		this.boardNumber = boardNumber;
 	}
 
-	public int getMemberNumber() {
-		return memberNumber;
+	public int getUserNumber() {
+		return userNumber;
 	}
 
-	public void setMemberNumber(int memberNumber) {
-		this.memberNumber = memberNumber;
+	public void setUserNumber(int userNumber) {
+		this.userNumber = userNumber;
 	}
 	
-	public String getMemberId() {
-		return memberId;
+	public String getUserId() {
+		return userId;
 	}
 
-	public void setMemberId(String memberId) {
-		this.memberId = memberId;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 
 	public String getReplyContent() {

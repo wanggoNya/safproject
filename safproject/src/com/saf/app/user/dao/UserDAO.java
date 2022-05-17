@@ -5,8 +5,8 @@ import java.util.Map;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
-import com.boardMVC.app.member.vo.MemberVO;
-import com.boardMVC.mybatis.config.MyBatisConfig;
+import com.saf.app.user.vo.UserVO;
+import com.saf.mybatis.config.MyBatisConfig;
 
 public class UserDAO {
 	SqlSessionFactory sqlSessionFactory = MyBatisConfig.getSqlsessoinFactory();
@@ -22,15 +22,15 @@ public class UserDAO {
 	}
 	
 	//회원가입
-	public void join(UserVO member) {
+	public void join(UserVO user) {
 		sqlSession.insert("User.join", user);
 	}
 	
 	//로그인
 	public int login(Map<String, String> loginMap) {
-		int memberNumber = 0;
-		try {memberNumber = sqlSession.selectOne("User.login", loginMap);} catch (Exception e) {;}
-		return memberNumber;
+		int userNumber = 0;
+		try {userNumber = sqlSession.selectOne("User.login", loginMap);} catch (Exception e) {;}
+		return userNumber;
 	}
 	
 	//회원 정보 조회

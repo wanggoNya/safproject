@@ -4,7 +4,7 @@ public class BoardVO {
 	private int boardNumber;
 	private String boardTitle;
 	private String boardContent;
-	private int memberNumber;
+	private int userNumber;
 	private String boardDate;
 	private int readCount;
 	
@@ -34,12 +34,12 @@ public class BoardVO {
 		this.boardContent = boardContent;
 	}
 
-	public int getMemberNumber() {
-		return memberNumber;
+	public int getUserNumber() {
+		return userNumber;
 	}
 
-	public void setMemberNumber(int memberNumber) {
-		this.memberNumber = memberNumber;
+	public void setUserNumber(int userNumber) {
+		this.userNumber = userNumber;
 	}
 
 	public String getBoardDate() {

@@ -15,12 +15,12 @@ public class BoardWrite implements Action{
 	public ActionForward execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		
 		HttpSession session = req.getSession();
-		MemberDAO mDao = new MemberDAO();
+		UserDAO mDao = new UserDAO();
 		ActionForward af = new ActionForward();
 		
-		String memberId = mDao.getInfo((Integer)session.getAttribute("memberNumber")).getMemberId();
+		String userId = uDao.getInfo((Integer)session.getAttribute("userNumber")).getUserId();
 		
-		req.setAttribute("memberId", memberId);
+		req.setAttribute("userId", userId);
 		
 		af.setRedirect(false);
 		af.setPath("/app/board/boardWrite.jsp");

@@ -3,7 +3,7 @@ package com.saf.app.board.vo;
 public class BoardReplyVO {
 	private int replyNumber;
 	private int boardNumber;
-	private int memberNumber;
+	private int userNumber;
 	private String replyContent;
 	
 	public BoardReplyVO() {;}
@@ -24,12 +24,12 @@ public class BoardReplyVO {
 		this.boardNumber = boardNumber;
 	}
 
-	public int getMemberNumber() {
-		return memberNumber;
+	public int getUserNumber() {
+		return userNumber;
 	}
 
-	public void setMemberNumber(int memberNumber) {
-		this.memberNumber = memberNumber;
+	public void setUserNumber(int userNumber) {
+		this.userNumber = userNumber;
 	}
 
 	public String getReplyContent() {
