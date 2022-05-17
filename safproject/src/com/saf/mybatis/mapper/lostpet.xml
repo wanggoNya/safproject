@@ -1,87 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http//mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="Lostpet">
-	<!-- 게시글 목록 -->
-	<!-- <select id="selectAll" parameterType="map" resultType="boardVO">
-		select boardNumber, boardTitle, boardContent, memberNumber, boardDate, readCount from tbl_board 
-		order by 1 desc limit #{startRow}, #{rowCount}
-	</select> -->
-	
+
 	<select id="selectAll" parameterType="map" resultType="lostpetDTO">
-		select boardNumber, boardTitle, boardContent, memberId, boardDate, readCount 
-		from tbl_board b join tbl_member m 
-		on b.memberNumber = m.memberNumber
+		select lpnumber, lparea1, lparea2, lparea3, lpspecies, lpgender, lpcolor, lpbreed, lpstatus, lpcontent, unum, lptime, lpimage
+		from lostpet lp join user u 
+		on lp.unum = u.unum
 		order by 1 desc limit #{startRow}, #{rowCount}
 	</select>
 	
-	<!-- 게시글 전체 개수  -->
-	<select id="getTotal" resultType="_int">
-		select count(boardNumber) from tbl_board
-	</select>
 	
 	<!-- 게시글 상세보기(전체 정보 조회) -->
-	<select id="selectDetail" parameterType="_int" resultType="boardDTO">
-		select boardNumber, boardTitle, boardContent, b.memberNumber, memberId 
-		from tbl_board b join tbl_member m
-		on  b.memberNumber = m.memberNumber and boardNumber = #{boardNumber}
+	<select id="selectDetail" parameterType="_int" resultType="lostpetDTO">
+		select lpnumber, lparea1, lparea2, lparea3, lpspecies, lpgender, lpcolor, lpbreed, lpstatus, lpcontent, unum, lptime, lpimage
+		from lostpet lp join user u
+		on  lp.unum = u.num and lpnumber = #{lpnumber}
 	</select>
 	
-	<!-- 조회수 -->
-	<update id="updateReadCount" parameterType="_int">
-		update tbl_board
-		set readCount = readCount + 1
-		where boardNumber = #{boardNumber}
-	</update>
 	
-	<!-- 최근 게시글 번호 -->
-	<select id="getSeq" resultType="_int">
-		select boardNumber from tbl_board
-		order by 1 desc limit 0, 1;
-	</select>
 	
 	<!-- 게시글 작성 -->
-	<insert id="insert" parameterType="boardVO">
-		insert into tbl_board (boardTitle, boardContent, memberNumber, boardDate) 
-		values(#{boardTitle}, #{boardContent}, #{memberNumber}, now())
+	<insert id="insert" parameterType="lostpetVO">
+		insert into lostpet (select lparea1, lparea2, lparea3, lpspecies, lpgender, lpcolor, lpbreed, lpimage, lpstatus, lptime, lpcontent) 
+		values(#{lparea1},#{lparea2},#{lparea3}, #{lpspecies}, #{lpgender}, #{lpcolor}, #{lpbreed}, #{lpimage}, #{lpstatus}, #{lptime}, #{lpcontent} )
 	</insert>
 	
 	<!-- 게시글 삭제 -->
 	<delete id="delete" parameterType="_int">
-		delete from tbl_board where boardNumber = #{boardNumber}
+		delete from lostpet where lpnumber = #{lpnumber}
 	</delete>
 	
 	<!-- 게시글 수정 -->
-	<update id="update" parameterType="boardVO">
-		update tbl_board
-		set boardTitle=#{boardTitle}, boardContent=#{boardContent}
-		where boardNumber = #{boardNumber}
+	<update id="update" parameterType="lostpetVO">
+		update lostpet
+		set lparea1=#{lparea1}, lparea2=#{lparea2}, lparea3=#{lparea3}, lpspecies=#{lpspecies}, lpgender=#{lpgender}, lpcolor=#{lpcolor}, lpbreed=#{lpbreed}, lpimage=#{lpimage}, lpstatus=#{lpstatus}, lptime=#{lptime}, lpcontent=#{lpcontent}
+		where lpnumber = #{lpnumber}
 	</update>
 	
-	<!-- 댓글 목록 -->
-	<select id="selectReplies" parameterType="_int" resultType="boardReplyDTO">
-		select replyNumber, boardNumber, r.memberNumber, memberId, replyContent 
-		from tbl_reply r join tbl_member m 
-		on r.memberNumber = m.memberNumber and boardNumber = #{boardNumber}
-		order by 1 desc
-	</select>
 	
-	<!-- 댓글 등록 -->
-	<insert id="insertReply" parameterType="boardReplyVO">
-		insert into tbl_reply (boardNumber, memberNumber, replyContent) 
-		values(#{boardNumber}, #{memberNumber}, #{replyContent})
-	</insert>
 	
-	<!-- 댓글 삭제 -->
-	<delete id="deleteReply" parameterType="_int">
-		delete from tbl_reply where replyNumber = #{replyNumber}
-	</delete>
 	
-	<!-- 댓글 수정 -->
-	<update id="updateReply" parameterType="boardReplyVO">
-		update tbl_reply 
-		set replyContent = #{replyContent} 
-		where replyNumber = #{replyNumber}
-	</update>
 </mapper>
 
 
