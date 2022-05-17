@@ -17,8 +17,7 @@
     
     
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/
-    lostpet/find_write.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/lostpet/find_write.css" />
 
 
     <title>실종동물 등록</title>

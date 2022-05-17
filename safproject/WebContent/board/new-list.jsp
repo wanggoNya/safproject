@@ -4,8 +4,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/
-    /board/LostPet.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/board/LostPet.css" type="text/css">
 </head>
 
 <body>
@@ -25,11 +24,11 @@
                 <p class="g-color-white g-font-size-18 g-pb-30">이웃과 함께 만드는 커뮤니티 <br> 주변 반려인의 이웃이 되어 주세요 <br> </p>
                 <div class="row">
                     <!--<div class="col-4">
-                        <a href="/teamproject/WebContent/find_write/find_write.html" class="btn btn-md btn-block btn-outline-light g-mr-10 g-mb-15">글쓰기</a>
+                        <a href="${pageContext.request.contextPath}/lostpet/find_write.jsp" class="btn btn-md btn-block btn-outline-light g-mr-10 g-mb-15">글쓰기</a>
                     </div>-->
                     <div class="col-4">
                         <!-- GA 클래스 추가 -->
-                        <a href="new-write.html"
+                        <a href="${pageContext.request.contextPath}/board/new-write.jsp"
                             class="btn btn-md btn-block btn-primary g-color-white g-mr-10 g-mb-15 g-brd-0 adopt_application_event">
                             글쓰기
                         </a>
@@ -65,7 +64,7 @@
                         </div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="new-write-detail.html">글 제목</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="${pageContext.request.contextPath}/board/new-write-detail.jsp">글 제목</a></h2>
                         <p class="text-secondary mb-0">
                             이름(닉네임)<br>
                             작성시간(시:분)
@@ -82,7 +81,7 @@
                         <div id="img1" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="LostPet_detail.html">글 제목</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">글 제목</a></h2>
                         <p class="text-secondary mb-0">
                             이름(닉네임)<br>
                             작성시간(시:분)
@@ -99,7 +98,7 @@
                         <div id="img1" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="LostPet_detail.html">글 제목</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">글 제목</a></h2>
                         <p class="text-secondary mb-0">
                             이름(닉네임)<br>
                             작성시간(시:분)
@@ -116,7 +115,7 @@
                         <div id="img1" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="LostPet_detail.html">글 제목</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">글 제목</a></h2>
                         <p class="text-secondary mb-0">
                             이름(닉네임)<br>
                             작성시간(시:분)
@@ -133,7 +132,7 @@
                         <div id="img1" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="LostPet_detail.html">글 제목</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">글 제목</a></h2>
                         <p class="text-secondary mb-0">
                             이름(닉네임)<br>
                             작성시간(시:분)
@@ -150,7 +149,7 @@
                         <div id="img1" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="LostPet_detail.html">글 제목</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">글 제목</a></h2>
                         <p class="text-secondary mb-0">
                             이름(닉네임)<br>
                             작성시간(시:분)
@@ -167,7 +166,7 @@
                         <div id="img1" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="LostPet_detail.html">글 제목</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">글 제목</a></h2>
                         <p class="text-secondary mb-0">
                             이름(닉네임)<br>
                             작성시간(시:분)
@@ -184,7 +183,7 @@
                         <div id="img1" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="LostPet_detail.html">글 제목</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">글 제목</a></h2>
                         <p class="text-secondary mb-0">
                             이름(닉네임)<br>
                             작성시간(시:분)
@@ -201,7 +200,7 @@
                         <div id="img1" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="LostPet_detail.html">글 제목</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">글 제목</a></h2>
                         <p class="text-secondary mb-0">
                             이름(닉네임)<br>
                             작성시간(시:분)
@@ -218,7 +217,7 @@
                         <div id="img1" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="LostPet_detail.html">글 제목</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">글 제목</a></h2>
                         <p class="text-secondary mb-0">
                             이름(닉네임)<br>
                             작성시간(시:분)
@@ -235,7 +234,7 @@
                         <div id="img1" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="LostPet_detail.html">글 제목</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">글 제목</a></h2>
                         <p class="text-secondary mb-0">
                             이름(닉네임)<br>
                             작성시간(시:분)
@@ -252,7 +251,7 @@
                         <div id="img1" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="LostPet_detail.html">글 제목</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">글 제목</a></h2>
                         <p class="text-secondary mb-0">
                             이름(닉네임)<br>
                             작성시간(시:분)

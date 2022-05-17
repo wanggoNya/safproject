@@ -4,8 +4,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/
-    lostpet/LostPet.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/lostpet/LostPet.css" type="text/css">
     <script src="https://code.jquery.com/jquery-latest.js"></script>
 
 </head>
@@ -29,13 +28,13 @@
                     도움의 손길이, 그들에게 가족을 되찾아줄 수 있을지도 모릅니다.</p>
                 <div class="row">
                     <!-- <div class="col-4">
-                        <a href="/teamproject/WebContent/find_write/find_write.html"
+                        <a href="${pageContext.request.contextPath}/lostpet/find_write.jsp"
                             class="btn btn-md btn-block btn-outline-light g-mr-10 g-mb-15">임시 보호
                             등록</a>
                     </div> -->
                     <div class="col-4">
                         <!-- GA 클래스 추가 -->
-                        <a href="/teamproject/WebContent/find_write/find_write.html"
+                        <a href="${pageContext.request.contextPath}/lostpet/find_write.jsp"
                             class="btn btn-md btn-block btn-primary g-color-white g-mr-10 g-mb-15 g-brd-0 adopt_application_event">
                             내 동물 찾기 <i class="material-icons g-font-size-16">글쓰기</i>
                         </a>
@@ -52,11 +51,11 @@
         <div class="row">
             <div class="col-sm-6 col-md-3 mb-7">
                 <div class="card border-0 shadow-soft h-100">
-                    <a href="/lostpet/LostPet_detail.html">
+                    <a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">
                         <div id="img1" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="/lostpet/LostPet_detail.html">역삼동 / 개(비글)</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">역삼동 / 개(비글)</a></h2>
                         <p class="text-secondary mb-0">
                             개(비글)<br>
                             수컷 추정(중성화 O)<br>
@@ -71,11 +70,11 @@
 
             <div class="col-sm-6 col-md-3 mb-7">
                 <div class="card border-0 shadow-soft h-100">
-                    <a href="/teamproject/WebContent/lostpet/LostPet_detail.html">
+                    <a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">
                         <div id="img2" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="/teamproject/WebContent/lostpet/LostPet_detail.html">역삼동 / 개(비글)</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">역삼동 / 개(비글)</a></h2>
                         <p class="text-secondary mb-0">
                             개(비글)<br>
                             수컷 추정(중성화 O)<br>
@@ -91,11 +90,11 @@
 
             <div class="col-sm-6 col-md-3 mb-7">
                 <div class="card border-0 shadow-soft h-100">
-                    <a href="/teamproject/WebContent/lostpet/LostPet_detail.html">
+                    <a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">
                         <div id="img3" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href=/teamproject/WebContent/lostpet/LostPet_detail.html">역삼동 / 개(비글)</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">역삼동 / 개(비글)</a></h2>
                         <p class="text-secondary mb-0">
                             개(비글)<br>
                             수컷 추정(중성화 O)<br>
@@ -110,11 +109,11 @@
 
             <div class="col-sm-6 col-md-3 mb-7">
                 <div class="card border-0 shadow-soft h-100">
-                    <a href="/teamproject/WebContent/lostpet/LostPet_detail.html">
+                    <a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">
                         <div id="img4" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="/teamproject/WebContent/lostpet/LostPet_detail.html">역삼동 / 개(비글)</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">역삼동 / 개(비글)</a></h2>
                         <p class="text-secondary mb-0">
                             개(비글)<br>
                             수컷 추정(중성화 O)<br>
@@ -129,11 +128,11 @@
 
             <div class="col-sm-6 col-md-3 mb-7">
                 <div class="card border-0 shadow-soft h-100">
-                    <a href="/teamproject/WebContent/lostpet/LostPet_detail.html">
+                    <a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">
                         <div id="img5" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="/teamproject/WebContent/lostpet/LostPet_detail.html">역삼동 / 개(비글)</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">역삼동 / 개(비글)</a></h2>
                         <p class="text-secondary mb-0">
                             개(비글)<br>
                             수컷 추정(중성화 O)<br>
@@ -148,11 +147,11 @@
 
             <div class="col-sm-6 col-md-3 mb-7">
                 <div class="card border-0 shadow-soft h-100">
-                    <a href="/teamproject/WebContent/lostpet/LostPet_detail.html">
+                    <a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">
                         <div id="img6" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="/teamproject/WebContent/lostpet/LostPet_detail.html">역삼동 / 개(비글)</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">역삼동 / 개(비글)</a></h2>
                         <p class="text-secondary mb-0">
                             개(비글)<br>
                             수컷 추정(중성화 O)<br>
@@ -167,11 +166,11 @@
 
             <div class="col-sm-6 col-md-3 mb-7">
                 <div class="card border-0 shadow-soft h-100">
-                    <a href="/teamproject/WebContent/lostpet/LostPet_detail.html">
+                    <a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">
                         <div id="img7" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="/teamproject/WebContent/lostpet/LostPet_detail.html">역삼동 / 개(비글)</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">역삼동 / 개(비글)</a></h2>
                         <p class="text-secondary mb-0">
                             개(비글)<br>
                             수컷 추정(중성화 O)<br>
@@ -186,11 +185,11 @@
 
             <div class="col-sm-6 col-md-3 mb-7">
                 <div class="card border-0 shadow-soft h-100">
-                    <a href="/teamproject/WebContent/lostpet/LostPet_detail.html">
+                    <a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">
                         <div id="img8" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="/teamproject/WebContent/lostpet/LostPet_detail.html">역삼동 / 개(비글)</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">역삼동 / 개(비글)</a></h2>
                         <p class="text-secondary mb-0">
                             개(비글)<br>
                             수컷 추정(중성화 O)<br>
@@ -205,11 +204,11 @@
 
             <div class="col-sm-6 col-md-3 mb-7">
                 <div class="card border-0 shadow-soft h-100">
-                    <a href="/teamproject/WebContent/lostpet/LostPet_detail.html">
+                    <a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">
                         <div id="img9" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="/teamproject/WebContent/lostpet/LostPet_detail.html">역삼동 / 개(비글)</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">역삼동 / 개(비글)</a></h2>
                         <p class="text-secondary mb-0">
                             개(비글)<br>
                             수컷 추정(중성화 O)<br>
@@ -224,11 +223,11 @@
 
             <div class="col-sm-6 col-md-3 mb-7">
                 <div class="card border-0 shadow-soft h-100">
-                    <a href="/teamproject/WebContent/lostpet/LostPet_detail.html">
+                    <a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">
                         <div id="img10" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="/teamproject/WebContent/lostpet/LostPet_detail.html">역삼동 / 개(비글)</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">역삼동 / 개(비글)</a></h2>
                         <p class="text-secondary mb-0">
                             개(비글)<br>
                             수컷 추정(중성화 O)<br>
@@ -243,11 +242,11 @@
 
             <div class="col-sm-6 col-md-3 mb-7">
                 <div class="card border-0 shadow-soft h-100">
-                    <a href="/teamproject/WebContent/lostpet/LostPet_detail.html">
+                    <a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">
                         <div id="img11" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="/teamproject/WebContent/lostpet/LostPet_detail.html">역삼동 / 개(비글)</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">역삼동 / 개(비글)</a></h2>
                         <p class="text-secondary mb-0">
                             개(비글)<br>
                             수컷 추정(중성화 O)<br>
@@ -262,11 +261,11 @@
 
             <div class="col-sm-6 col-md-3 mb-7">
                 <div class="card border-0 shadow-soft h-100">
-                    <a href="/teamproject/WebContent/lostpet/LostPet_detail.html">
+                    <a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">
                         <div id="img12" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="/teamproject/WebContent/lostpet/LostPet_detail.html">역삼동 / 개(비글)</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">역삼동 / 개(비글)</a></h2>
                         <p class="text-secondary mb-0">
                             개(비글)<br>
                             수컷 추정(중성화 O)<br>

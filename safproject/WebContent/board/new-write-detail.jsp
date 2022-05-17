@@ -4,8 +4,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/
-    /board/LostPet.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/board/LostPet.css" type="text/css">
 </head>
 
 <body>
@@ -64,7 +63,7 @@
                     <a class="primary--hover shadow-sm" href="" aria-label="이전글">이전글</a>
                 </li>
                 <li class="list-inline-item float-left">
-                    <a class="primary--hover shadow-sm" href="LostPet.html" aria-label="목록">목록</a>
+                    <a class="primary--hover shadow-sm" href="${pageContext.request.contextPath}/lostpet/LostPet.jsp" aria-label="목록">목록</a>
                 </li>
                 <li class="list-inline-item float-left">
                     <a class="primary--hover shadow-sm" href="" aria-label="다음글">다음글</a>

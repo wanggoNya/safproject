@@ -27,11 +27,11 @@
               <!-- 탑바 right 5-2 -->
               <div class="col-auto g-pos-rel g-px-15">
                 <ul class="list-inline g-mt-minus-10">
-                  <li class="list-inline-item"><a class="g-color-topbar" href="/login/login.html">로그인</a></li>
+                  <li class="list-inline-item"><a class="g-color-topbar" href="${pageContext.request.contextPath}/login/login.jsp">로그인</a></li>
                   <li class="list-inline-item g-color-topbar">|</li>
-                  <li class="list-inline-item"><a class="g-color-topbar" href="/join/join.html">회원가입</a></li>
+                  <li class="list-inline-item"><a class="g-color-topbar" href="${pageContext.request.contextPath}/join/join.jsp">회원가입</a></li>
                   <li class="list-inline-item g-color-topbar">|</li>
-                  <li class="list-inline-item"><a class="g-color-topbar" href="/mypage/mypage_all.html">마이페이지</a></li>
+                  <li class="list-inline-item"><a class="g-color-topbar" href="${pageContext.request.contextPath}/mypage/mypage_all.jsp">마이페이지</a></li>
                 </ul>
 
               </div>
@@ -56,10 +56,10 @@
             <a href=""style="text-decoration:none; ">소개</a>
           </li>
           <li class="list-inline-header">
-            <a href="/lostpet/LostPet.html"style="text-decoration:none; ">실종동물찾기</a>
+            <a href="${pageContext.request.contextPath}/lostpet/LostPet.jsp"style="text-decoration:none; ">실종동물찾기</a>
             <ul class="showmenu list-drop">
-              <li class="hide-list"><a  class="drop-a"href="/lostpet/find_write.html">동물 등록하기</a></li>
-              <li class="hide-list"><a  class="drop-a"href="/lostpet/LostPet.html">동물 / 주인 찾기</a></li>
+              <li class="hide-list"><a  class="drop-a"href="${pageContext.request.contextPath}/lostpet/find_write.jsp">동물 등록하기</a></li>
+              <li class="hide-list"><a  class="drop-a"href="${pageContext.request.contextPath}/lostpet/LostPet.jsp">동물 / 주인 찾기</a></li>
             </ul>
           </li>
           <li class="list-inline-header">
@@ -68,8 +68,8 @@
           <li class="list-inline-header">
             <a href="/board/new-list.html"style="text-decoration:none; ">커뮤니티</a>
             <ul class="showmenu list-drop">
-              <li class="hide-list"><a  class="drop-a"href="/board/new-list.html">소통해요</a></li>
-              <li class="hide-list"><a  class="drop-a"href="/board/new-list.html">내 반려동물 자랑</a></li>
+              <li class="hide-list"><a  class="drop-a"href="${pageContext.request.contextPath}/board/new-list.jsp">소통해요</a></li>
+              <li class="hide-list"><a  class="drop-a"href="${pageContext.request.contextPath}/board/new-list.jsp">내 반려동물 자랑</a></li>
             </ul>
           </li>
         </ul>
