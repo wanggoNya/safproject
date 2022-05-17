@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http//mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="User">
+<<<<<<< HEAD
+
+	<!-- 아이디 중복검사 -->
+	<select id="checkId" parameterType="string" resultType="_int">
+		select count(uid) from user 
+		where uid = #{uid}
+=======
 	<!-- 아이디 중복검사 -->
 	<select id="checkId" parameterType="string" resultType="_int">
 		select count(userId) from tbl_user 
 		where userId = #{userId}
+>>>>>>> 373caf5ca7484c90129dc4d794c45a913c5904c7
 	</select>
 	
 	<!-- 회원 가입 -->
 	<insert id="join" parameterType="userVO">
+<<<<<<< HEAD
+		insert into user
+		(
+			uid, uphone, upw, uname, uaddr, uemail
+			
+		)
+		values
+		(
+			#{uid}, #{uphone}, #{upw}, #{uname}, #{uaddr}, #{uemail}
+=======
 		insert into tbl_user
 		(
 			userId, userPw, userName, userAge, userGender, userEmail, 
@@ -18,11 +36,37 @@
 		(
 			#{userId}, #{userPw}, #{userName}, #{userAge}, #{userGender}, #{userEmail},
 			 #{userZipcode}, #{userAddress}, #{userAddressDetail}
+>>>>>>> 373caf5ca7484c90129dc4d794c45a913c5904c7
 		 )
 	</insert>
 	
 	<!-- 로그인 -->
 	<select id="login" parameterType="map" resultType="_int">
+<<<<<<< HEAD
+		select unum from user where uid=#{uid} and upw=#{upw}
+	</select>
+	
+	<!-- 회원 정보 조회 -->
+	<select id="getInfo" parameterType="_int" resultType="memberVO">
+		select 
+			uid, memberPw, memberName, memberAge, memberGender, memberEmail, 
+			memberZipcode, memberAddress, memberAddressDetail 
+		from user where unum = #{unum}			
+	</select>
+	<!-- 회원 정보 수정 -->
+	<update id="update" parameterType="userVO">
+		update user
+		set uphone=#{uphone}, uaddr=#{uaddr}, uemail=#{uemail}
+		where lpnumber = #{lpnumber}
+	</update>
+	
+	<!-- 비밀번호 수정 -->
+	<update id="update" parameterType="userVO">
+		update user
+		set upw=#{upw}
+		where unum = #{unum}
+	</update>
+=======
 		select userNumber from tbl_user where userId=#{userId} and userPw=#{userPw}
 	</select>
 	
@@ -33,6 +77,7 @@
 			userZipcode, userAddress, userAddressDetail 
 		from tbl_user where userNumber = #{userNumber}			
 	</select>
+>>>>>>> 373caf5ca7484c90129dc4d794c45a913c5904c7
 </mapper>
 
 
