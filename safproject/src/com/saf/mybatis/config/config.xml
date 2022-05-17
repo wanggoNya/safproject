@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.saf.app.user.vo.UserVO" alias="userVO"/>
+		<typeAlias type="com.boardMVC.app.board.vo.BoardVO" alias="boardVO"/>
+		<typeAlias type="com.boardMVC.app.board.vo.BoardDTO" alias="boardDTO"/>
+		<typeAlias type="com.boardMVC.app.lostpet.vo.LostPetVO" alias="lostPetVO"/>
+		<typeAlias type="com.boardMVC.app.lostpet.vo.LostPetDTO" alias="lostPetDTO"/>
+		<typeAlias type="com.boardMVC.app.reply.vo.ReplyVO" alias="ReplyVO"/>
+		<typeAlias type="com.boardMVC.app.reply.vo.ReplyDTO" alias="ReplyDTO"/>
+		<typeAlias type="com.boardMVC.app.file.vo.FileVO" alias="fileVO"/>
+	</typeAliases>
+
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC"/>
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+				<property name="url" value="jdbc:mysql://localhost:3306/streetanimalfinder"/>
+				<property name="username" value="root"/>
+				<property name="password" value="0000"/>
+			</dataSource>
+		</environment>
+	</environments>
+	
+	<mappers>
+		<mapper resource="com/saf/mybatis/mapper/user.xml"/>
+		<mapper resource="com/saf/mybatis/mapper/board.xml"/>
+		<mapper resource="com/saf/mybatis/mapper/file.xml"/>
+		<mapper resource="com/saf/mybatis/mapper/lostpet.xml"/>
+		<mapper resource="com/saf/mybatis/mapper/user.xml"/>
+	</mappers>
+	
+</configuration>
