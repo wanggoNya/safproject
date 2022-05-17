@@ -1,60 +1,121 @@
 package com.saf.app.lostpet.vo;
 
 public class LostPetVO {
-	private int boardNumber;
-	private String boardTitle;
-	private String boardContent;
-	private int memberNumber;
-	private String boardDate;
-	private int readCount;
+	private int lpnumber;
+	private String lparea1;
+	private String lparea2;
+	private String lparea3;
+	private String lpspecies;
+	private String lpgender;
+	private String lpcolor;
+	private String lpbreed;
+	private String lpimage;
+	private int lpstatus;
+	private String lptime;
+	private String lpcontent;
+	private int unum;
 	
-	public LostPetVO() {;}
-
-	public int getBoardNumber() {
-		return boardNumber;
+	public int getLpnumber() {
+		return lpnumber;
 	}
-
-	public void setBoardNumber(int boardNumber) {
-		this.boardNumber = boardNumber;
+	public void setLpnumber(int lpnumber) {
+		this.lpnumber = lpnumber;
 	}
-
-	public String getBoardTitle() {
-		return boardTitle;
+	public String getLparea1() {
+		return lparea1;
 	}
-
-	public void setBoardTitle(String boardTitle) {
-		this.boardTitle = boardTitle;
+	public void setLparea1(String lparea1) {
+		this.lparea1 = lparea1;
 	}
-
-	public String getBoardContent() {
-		return boardContent;
+	public String getLparea2() {
+		return lparea2;
 	}
-
-	public void setBoardContent(String boardContent) {
-		this.boardContent = boardContent;
+	public void setLparea2(String lparea2) {
+		this.lparea2 = lparea2;
 	}
-
-	public int getMemberNumber() {
-		return memberNumber;
+	public String getLparea3() {
+		return lparea3;
 	}
-
-	public void setMemberNumber(int memberNumber) {
-		this.memberNumber = memberNumber;
+	public void setLparea3(String lparea3) {
+		this.lparea3 = lparea3;
 	}
-
-	public String getBoardDate() {
-		return boardDate;
+	public String getLpspecies() {
+		return lpspecies;
 	}
-
-	public void setBoardDate(String boardDate) {
-		this.boardDate = boardDate;
+	public void setLpspecies(String lpspecies) {
+		this.lpspecies = lpspecies;
 	}
-
-	public int getReadCount() {
-		return readCount;
+	public String getLpgender() {
+		return lpgender;
 	}
-
-	public void setReadCount(int readCount) {
-		this.readCount = readCount;
+	public void setLpgender(String lpgender) {
+		this.lpgender = lpgender;
 	}
+	public String getLpcolor() {
+		return lpcolor;
+	}
+	public void setLpcolor(String lpcolor) {
+		this.lpcolor = lpcolor;
+	}
+	public String getLpbreed() {
+		return lpbreed;
+	}
+	public void setLpbreed(String lpbreed) {
+		this.lpbreed = lpbreed;
+	}
+	public String getLpimage() {
+		return lpimage;
+	}
+	public void setLpimage(String lpimage) {
+		this.lpimage = lpimage;
+	}
+	public int getLpstatus() {
+		return lpstatus;
+	}
+	public void setLpstatus(int lpstatus) {
+		this.lpstatus = lpstatus;
+	}
+	public String getLptime() {
+		return lptime;
+	}
+	public void setLptime(String lptime) {
+		this.lptime = lptime;
+	}
+	public String getLpcontent() {
+		return lpcontent;
+	}
+	public void setLpcontent(String lpcontent) {
+		this.lpcontent = lpcontent;
+	}
+	public int getUnum() {
+		return unum;
+	}
+	public void setUnum(int unum) {
+		this.unum = unum;
+	}
+	
+	public LostPetVO(){
+		
+	}
+	
+	public LostPetVO(int lpnumber, String lparea1, String lparea2, String lparea3, String lpspecies, String lpgender,
+			String lpcolor, String lpbreed, String lpimage, int lpstatus, String lptime, String lpcontent, int unum) {
+		super();
+		this.lpnumber = lpnumber;
+		this.lparea1 = lparea1;
+		this.lparea2 = lparea2;
+		this.lparea3 = lparea3;
+		this.lpspecies = lpspecies;
+		this.lpgender = lpgender;
+		this.lpcolor = lpcolor;
+		this.lpbreed = lpbreed;
+		this.lpimage = lpimage;
+		this.lpstatus = lpstatus;
+		this.lptime = lptime;
+		this.lpcontent = lpcontent;
+		this.unum = unum;
+	}
+	
+	
+
 }
