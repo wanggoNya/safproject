@@ -1,4 +1,4 @@
-package com.saf.app.board.controller;
+package com.saf.app.lostpet.controller;
 
 import java.io.File;
 import java.io.IOException;
@@ -17,7 +17,7 @@ import com.boardMVC.app.board.vo.FilesVO;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
-public class BoardUpdateOk implements Action {
+public class LostPetUpdateOk implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {

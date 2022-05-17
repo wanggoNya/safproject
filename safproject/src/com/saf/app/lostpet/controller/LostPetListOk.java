@@ -1,4 +1,4 @@
-package com.saf.app.board.controller;
+package com.saf.app.lostpet.controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -16,7 +16,7 @@ import com.boardMVC.app.board.vo.BoardDTO;
 import com.boardMVC.app.board.vo.BoardVO;
 import com.boardMVC.app.member.dao.MemberDAO;
 
-public class BoardListOk implements Action{
+public class LostPetListOk implements Action{
 
 	@Override
 	public ActionForward execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
