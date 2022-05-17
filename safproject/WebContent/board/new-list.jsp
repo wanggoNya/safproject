@@ -46,7 +46,7 @@
         <div class="row">
             <div class="col-sm-6 col-md-3 mb-7">
                 <div class="card border-0 shadow-soft h-100">
-                    <a href="">
+                    <a href="${pageContext.request.contextPath}/board/new-write-detail.jsp">
                         <div id="img1" class="image-box card-img-top" name="img" style="width:100%;height:220px;">
                             <img class="image-thumbnail" src="logo.svg">
                             <!-- * 상위 div 에 꽉 채우고 싶다.
@@ -77,11 +77,11 @@
             </div>
             <div class="col-sm-6 col-md-3 mb-7">
                 <div class="card border-0 shadow-soft h-100">
-                    <a href="">
+                    <a href="${pageContext.request.contextPath}/board/new-write-detail.jsp">
                         <div id="img1" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="${pageContext.request.contextPath}/lostpet/LostPet_detail.jsp">글 제목</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="${pageContext.request.contextPath}/board/new-write-detail.jsp">글 제목</a></h2>
                         <p class="text-secondary mb-0">
                             이름(닉네임)<br>
                             작성시간(시:분)

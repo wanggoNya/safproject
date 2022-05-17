@@ -7,10 +7,8 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>스트릿애니멀파인더</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='${pageContext.request.contextPath}/
-    /mainpage/main.css'>
-    <script src='${pageContext.request.contextPath}/
-    mainpage/main.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='${pageContext.request.contextPath}/mainpage/main.css'>
+    <script src='${pageContext.request.contextPath}/mainpage/main.js'></script>
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
  
 </head>
@@ -123,7 +121,7 @@
         </div>
 
         <div class="subs_container">
-            <a href="/lostpet/LostPet.html" class="subs_btn" style="background-color: #6AAAE4;">실종동물 더 찾아보기</a>
+            <a href="${pageContext.request.contextPath}/lostpet/LostPet.jsp" class="subs_btn" style="background-color: #6AAAE4;">실종동물 더 찾아보기</a>
         </div>
     </section>
     <div id="footer"></div>
