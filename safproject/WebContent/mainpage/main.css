@@ -1,0 +1,376 @@
+.announcement_container {
+    max-width: 1140px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    font-family: "Gotham","Noto Sans KR",sans-serif !important;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #333;
+}
+
+.announcement {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.anoounce {
+    padding-bottom: 1.42857rem !important;
+    flex: 0 0 50%;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    display: block;
+    
+}
+
+.nav_bar {
+    display: flex;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-top: 0;
+    margin-block-start: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.nav_item {
+    display: inline-block;
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.nav_item a {
+    border-color: #004BA0;
+    color: #333333;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border: solid 1px transparent;
+    text-decoration: none;
+    transition-property: color,background-color,border-color;
+    transition-duration: .2s;
+    transition-timing-function: ease-in;
+    display: block;
+    padding: 0.5rem 1rem;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.notice {
+    padding-top: 1.42857rem !important;
+    padding-bottom: 1.42857rem !important;
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: block;
+    box-sizing: border-box;
+}
+
+.contents {
+    display: block;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.content {
+    height: auto;
+    display: block;
+    overflow: hidden;
+    transition: opacity .15s linear;
+    box-sizing: border-box;
+}
+
+.content p {
+    margin-bottom: 0 !important;
+    margin-top: 0;
+    box-sizing: border-box;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.bottom_line {
+    margin-bottom: 0.64286rem !important;
+    margin-top: 0.5rem !important;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+}
+
+.content p a {
+    color: #000 !important;
+    text-decoration: none !important;
+    font-size: 1rem !important;
+    background-color: transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: "Gotham","Noto Sans KR",sans-serif !important;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.notice_wrap {
+    padding-top: 1.42857rem !important;
+    padding-bottom: 1.42857rem !important;
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+.slideshow-container {
+    max-width: 550px;
+    position: relative;
+    margin: auto;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+
+    to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+}
+
+* {box-sizing: border-box;}
+
+.active {
+   background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.mySlides {display: none;}
+
+.make_change {
+    padding-bottom: 0.71429rem !important;
+    padding-top: 2.14286rem !important;
+    margin-bottom: 2.14286rem !important;
+    display: block;
+    box-sizing: border-box;
+    font-family: "Gotham","Noto Sans KR",sans-serif !important;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #333;
+}
+
+.ch_tit {
+    padding-top: 2.14286rem !important;
+    padding-bottom: 2.14286rem !important;
+    max-width: 1140px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+    display: block;
+}
+
+.ch_tit p {
+    color: #333 !important;
+    font-size: 1.28571rem !important;
+    font-weight: 700!important;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    box-sizing: border-box;
+    font-family: "Gotham","Noto Sans KR",sans-serif !important;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #333;
+    text-rendering: optimizelegibility;
+    text-align: left;
+}
+
+.col {
+    padding-bottom: 1.42857rem !important;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    display: block;
+}
+
+.info {
+    padding: 1.42857rem !important;
+    background-color: #fff !important;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+}
+
+.info a {
+    color: #333 !important;
+    text-decoration: none !important;
+    outline: none;
+    background-color: transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.block0 {
+    margin-bottom: 1.07143rem !important;
+    font-size: 1.42857rem !important;
+    font-weight: 700!important;
+    display: block!important;
+    box-sizing: border-box;
+    color: #333 !important;
+    cursor: pointer;
+    font-family: "Gotham","Noto Sans KR",sans-serif !important;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.block1 {
+    font-weight: 700!important;
+    margin-bottom: 0!important;
+    display: block!important;
+    color: #333 !important;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: "Gotham","Noto Sans KR",sans-serif !important;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.block2 {
+    color: #828282 !important;
+    margin-bottom: 0!important;
+    display: block!important;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: "Gotham","Noto Sans KR",sans-serif !important;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.subs_container {
+    max-width: 1140px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+    display: block;
+    font-family: "Gotham","Noto Sans KR",sans-serif !important;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #333;
+}
+
+.subs_btn {
+    margin-bottom: 0.71429rem !important;
+    color: #fff !important;
+    font-size: 1.28571rem !important;
+    line-height: 1.4;
+    padding: 0.92857rem 1.85714rem;
+    position: relative;
+    transition: .2s ease;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    vertical-align: middle;
+    user-select: none; 
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    text-decoration: none !important;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Gotham","Noto Sans KR",sans-serif !important;
+}
+
+.together {
+    margin-top: 2.14286rem !important;
+    margin-bottom: 2.14286rem !important;
+    font-size: 0.85714rem !important;
+    max-width: 1140px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Gotham","Noto Sans KR",sans-serif !important;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #333;
+}
+
+.img_box {
+    background: none;
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    user-select: none;
+}
