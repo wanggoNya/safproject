@@ -17,8 +17,8 @@ public class BoardReplyUpdateOk implements Action {
 		req.setCharacterEncoding("UTF-8");
 		resp.setCharacterEncoding("UTF-8");
 		
-		BoardReplyVO reply = new BoardReplyVO();
-		BoardReplyDAO dao = new BoardReplyDAO();
+		LostPetReplyVO reply = new LostPetReplyVO();
+		LostPetReplyDAO dao = new LostPetReplyDAO();
 		
 		reply.setReplyNumber(Integer.parseInt(req.getParameter("replyNumber")));
 		reply.setReplyContent(req.getParameter("replyContent"));

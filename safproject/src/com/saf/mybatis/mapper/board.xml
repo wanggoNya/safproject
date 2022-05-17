@@ -4,26 +4,43 @@
 	
 	
 	<select id="selectAll" parameterType="map" resultType="boardDTO">
+<<<<<<< HEAD
 		select bnumber, btitle, bcontent, uid, bdate, bimage
 		from board b join user u 
 		on b.unum = u.unum
+=======
+		select boardNumber, boardTitle, boardContent, userId, boardDate, readCount 
+		from tbl_board b join tbl_user u 
+		on b.userNumber = u.userNumber
+>>>>>>> 373caf5ca7484c90129dc4d794c45a913c5904c7
 		order by 1 desc limit #{startRow}, #{rowCount}
 	</select>
 	
 	
 	<!-- 게시글 상세보기(전체 정보 조회) -->
 	<select id="selectDetail" parameterType="_int" resultType="boardDTO">
+<<<<<<< HEAD
 		select bnumber, btitle, bcontent, b.unum, uid
 		from board b join user u
 		on  b.unum = u.num and bnumber = #{bnumber}
+=======
+		select boardNumber, boardTitle, boardContent, b.userNumber, userId 
+		from tbl_board b join tbl_user u
+		on  b.userNumber = u.userNumber and boardNumber = #{boardNumber}
+>>>>>>> 373caf5ca7484c90129dc4d794c45a913c5904c7
 	</select>
 	
 	
 	
 	<!-- 게시글 작성 -->
 	<insert id="insert" parameterType="boardVO">
+<<<<<<< HEAD
 		insert into board (btitle, bcontent, unum, bimage, bdate) 
 		values(#{btitle}, #{bcontent}, #{unum}, #{bimage}, now())
+=======
+		insert into tbl_board (boardTitle, boardContent, userNumber, boardDate) 
+		values(#{boardTitle}, #{boardContent}, #{userNumber}, now())
+>>>>>>> 373caf5ca7484c90129dc4d794c45a913c5904c7
 	</insert>
 	
 	<!-- 게시글 삭제 -->
@@ -40,16 +57,27 @@
 	
 	<!-- 댓글 목록 -->
 	<select id="selectReplies" parameterType="_int" resultType="boardReplyDTO">
+<<<<<<< HEAD
 		select rnumber, bnumber, r.unum, memberId, rcontent 
 		from reply r join user u 
 		on r.unum = u.unum and bnumber = #{bnumber}
+=======
+		select replyNumber, boardNumber, r.userNumber, userId, replyContent 
+		from tbl_reply r join tbl_user u 
+		on r.userNumber = u.userNumber and boardNumber = #{boardNumber}
+>>>>>>> 373caf5ca7484c90129dc4d794c45a913c5904c7
 		order by 1 desc
 	</select>
 	
 	<!-- 댓글 등록 -->
 	<insert id="insertReply" parameterType="boardReplyVO">
+<<<<<<< HEAD
 		insert into reply (bnumber, unum, rcontent) 
 		values(#{bnumber}, #{unum}, #{rcontent})
+=======
+		insert into tbl_reply (boardNumber, userNumber, replyContent) 
+		values(#{boardNumber}, #{userNumber}, #{replyContent})
+>>>>>>> 373caf5ca7484c90129dc4d794c45a913c5904c7
 	</insert>
 	
 	<!-- 댓글 삭제 -->
