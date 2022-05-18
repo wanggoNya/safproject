@@ -77,6 +77,13 @@
       </div>
 <!--     <div class="lnb-bg showmenu"> -->
     </div>
+    
+    <div class="small-header">
+   	<a href=""style="text-decoration:none; ">소개</a>
+   	<a href=""style="text-decoration:none; ">실종동물찾기</a>
+   	<a href=""style="text-decoration:none; ">전문가FAQ</a>
+   	<a href=""style="text-decoration:none; ">커뮤니티</a>
+    </div>
 </header>
 
 
@@ -95,5 +102,10 @@
            });
       });
       </script>
+      
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  
+  
   </body>
 </html>
