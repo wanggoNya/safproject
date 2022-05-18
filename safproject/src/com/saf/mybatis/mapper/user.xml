@@ -29,13 +29,7 @@
 		select unum from user where uid=#{uid} and upw=#{upw}
 	</select>
 	
-	<!-- 회원 정보 조회 -->
-	<select id="getInfo" parameterType="_int" resultType="memberVO">
-		select 
-			uid, memberPw, memberName, memberAge, memberGender, memberEmail, 
-			memberZipcode, memberAddress, memberAddressDetail 
-		from user where unum = #{unum}			
-	</select>
+
 	<!-- 회원 정보 수정 -->
 	<update id="update" parameterType="userVO">
 		update user
