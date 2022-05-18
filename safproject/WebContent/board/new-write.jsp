@@ -20,8 +20,7 @@
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
     <!-- summernote 가져온것 -->
 
-<link rel="stylesheet" href="${pageContext.request.contextPath}/board/new-write.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/board/new-write.css">
+
 
 
 
