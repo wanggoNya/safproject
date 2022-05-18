@@ -593,3 +593,13 @@ body {
     box-sizing: border-box;
     display: block;
 }
+
+.g-font-size-12 {
+    color: #004BA0 !important;
+    font-size: 0.85714rem !important;
+    font-weight: 700!important;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: center;
+    list-style: none;
+}
