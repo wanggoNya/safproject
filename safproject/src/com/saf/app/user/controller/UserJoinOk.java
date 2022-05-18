@@ -5,9 +5,9 @@ import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.saf.action.Action;
-import com.saf.action.ActionForward;
-import com.sag.app.user.dao.UserDAO;
+import com.saf.app.action.Action;
+import com.saf.app.action.ActionForward;
+import com.saf.app.user.dao.UserDAO;
 import com.saf.app.user.vo.UserVO;
 
 public class UserJoinOk implements Action{
@@ -21,15 +21,13 @@ public class UserJoinOk implements Action{
 		UserDAO dao = new UserDAO();
 		
 		
-		user.setUserId(req.getParameter("userId"));
-		user.setUserPw(req.getParameter("userPw"));
-		user.setUserName(req.getParameter("userName"));
-		user.setUserAge(Integer.parseInt(req.getParameter("userAge")));
-		user.setUserGender(req.getParameter("userGender"));
-		user.setUserEmail(req.getParameter("userEmail"));
-		user.setUserZipcode(req.getParameter("userZipcode"));
-		user.setUserAddress(req.getParameter("userAddress"));
-		user.setUserAddressDetail(req.getParameter("userAddressDetail"));
+		user.setUnum(Integer(req.getParameter("uNum")));
+		user.setUid(req.getParameter("uid"));
+		user.setUphone(req.getParameter("uphone"));
+		user.setUpw(req.getParameter("userPw"));
+		user.setUname(req.getParameter("userName"));
+		user.setUaddr(req.getParameter("uaddr"));
+		user.setUemail(req.getParameter("uemail"));
 		
 		dao.join(user);
 		
@@ -39,5 +37,10 @@ public class UserJoinOk implements Action{
 		af.setPath(req.getContextPath() + "/user/UserLogin.me");
 		
 		return af;
+	}
+
+	private int Integer(String parameter) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }
