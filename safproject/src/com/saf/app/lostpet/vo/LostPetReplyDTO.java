@@ -2,7 +2,7 @@ package com.saf.app.lostpet.vo;
 
 public class LostPetReplyDTO {
 	private int replyNumber;
-	private int boardNumber;
+	private int lostpetNumber;
 	private int userNumber;
 	private String userId;
 	private String replyContent;
@@ -17,12 +17,12 @@ public class LostPetReplyDTO {
 		this.replyNumber = replyNumber;
 	}
 
-	public int getBoardNumber() {
-		return boardNumber;
+	public int getLostpetNumber() {
+		return lostpetNumber;
 	}
 
-	public void setBoardNumber(int boardNumber) {
-		this.boardNumber = boardNumber;
+	public void setLostpetNumber(int lostpetNumber) {
+		this.lostpetNumber = lostpetNumber;
 	}
 
 	public int getUserNumber() {

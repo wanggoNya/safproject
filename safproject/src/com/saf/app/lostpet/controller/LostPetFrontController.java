@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.boardMVC.action.ActionForward;
+import com.saf.app.action.ActionForward;
 
 public class LostPetFrontController extends HttpServlet {
 	@Override
@@ -28,35 +28,39 @@ public class LostPetFrontController extends HttpServlet {
 		ActionForward af = null;
 		
 		if(command.equals("/lostpet/controller/LostPetListOk.lo")) {
-			//new UserCheckIdOk().execute(req, resp);
+//			둘중 뭐가 맞는지? 
+			af = new LostPetListOk().execute(req, resp); 
+			new LostPetListOk().execute(req, resp);
 			
 		}else if(command.equals("/lostpet/controller/LostPetDetailOk.lo")) {
-			//af = new ActionForward();
-			//af.setRedirect(false);
-			//af.setPath("/app/user/join.jsp");
+			af = new LostPetDetailOk().execute(req, resp);
 			
 		}else if(command.equals("/lostpet/controller/LostPetDeleteOk.lo")) {
-			//af = new UserJoinOk().execute(req, resp);
+			af = new LostPetDeleteOk().execute(req, resp);
 			
-		}else if(command.equals("/lostpet/controller/LostPetReplyDelete.lo")) {
-			//af = new ActionForward();
-			//af.setRedirect(false);
-			//af.setPath("/app/user/login.jsp");
-			
+		}else if(command.equals("/lostpet/controller/LostPetReplyDeleteOk.lo")) {
+			af = new LostPetReplyDeleteOk().execute(req, resp);
+		
 		}else if(command.equals("/lostpet/controller/LostPetReplyListOk.lo")) {
-			//af = new UserLoginOk().execute(req, resp);
+			af = new LostPetReplyListOk().execute(req, resp);
 			
-		}else if(command.equals("/lostpet/controller/LostPetReplyUpdate.lo")) {
+		}else if(command.equals("/lostpet/controller/LostPetReplyUpdateOk.lo")) {
+			af = new LostPetReplyUpdateOk().execute(req, resp);
 			
-		}else if(command.equals("/lostpet/controller/LostPetReplyWrite.lo")) {
+		}else if(command.equals("/lostpet/controller/LostPetReplyWriteOk.lo")) {
+			af = new LostPetReplyWriteOk().execute(req, resp);
 			
 		}else if(command.equals("/lostpet/controller/LostPetUpdate.lo")) {
+			af = new LostPetUpdate().execute(req, resp);
 			
 		}else if(command.equals("/lostpet/controller/LostPetUpdateOk.lo")) {
+			af = new LostPetDetailOk().execute(req, resp);
 			
 		}else if(command.equals("/lostpet/controller/LostPetWrite.lo")) {
+			af = new LostPetWrite().execute(req, resp);
 			
 		}else if(command.equals("/lostpet/controller/LostPetWriteOk.lo")) {
+			af = new LostPetWriteOk().execute(req, resp);
 			
 		}
 		
