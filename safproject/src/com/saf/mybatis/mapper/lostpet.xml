@@ -3,45 +3,28 @@
 <mapper namespace="Lostpet">
 
 	<select id="selectAll" parameterType="map" resultType="lostpetDTO">
-<<<<<<< HEAD
 		select lpnumber, lparea1, lparea2, lparea3, lpspecies, lpgender, lpcolor, lpbreed, lpstatus, lpcontent, unum, lptime, lpimage
 		from lostpet lp join user u 
 		on lp.unum = u.unum
-=======
-		select boardNumber, boardTitle, boardContent, userId, boardDate, readCount 
-		from tbl_board b join tbl_user u 
-		on b.userNumber = u.userNumber
->>>>>>> 373caf5ca7484c90129dc4d794c45a913c5904c7
+
 		order by 1 desc limit #{startRow}, #{rowCount}
 	</select>
 	
 	
 	<!-- 게시글 상세보기(전체 정보 조회) -->
-<<<<<<< HEAD
 	<select id="selectDetail" parameterType="_int" resultType="lostpetDTO">
 		select lpnumber, lparea1, lparea2, lparea3, lpspecies, lpgender, lpcolor, lpbreed, lpstatus, lpcontent, unum, lptime, lpimage
 		from lostpet lp join user u
 		on  lp.unum = u.num and lpnumber = #{lpnumber}
-=======
-	<select id="selectDetail" parameterType="_int" resultType="boardDTO">
-		select boardNumber, boardTitle, boardContent, b.userNumber, userId 
-		from tbl_board b join tbl_user u
-		on  b.userNumber = u.userNumber and boardNumber = #{boardNumber}
->>>>>>> 373caf5ca7484c90129dc4d794c45a913c5904c7
 	</select>
 	
 	
 	
 	<!-- 게시글 작성 -->
-<<<<<<< HEAD
+
 	<insert id="insert" parameterType="lostpetVO">
 		insert into lostpet (select lparea1, lparea2, lparea3, lpspecies, lpgender, lpcolor, lpbreed, lpimage, lpstatus, lptime, lpcontent) 
 		values(#{lparea1},#{lparea2},#{lparea3}, #{lpspecies}, #{lpgender}, #{lpcolor}, #{lpbreed}, #{lpimage}, #{lpstatus}, #{lptime}, #{lpcontent} )
-=======
-	<insert id="insert" parameterType="boardVO">
-		insert into tbl_board (boardTitle, boardContent, userNumber, boardDate) 
-		values(#{boardTitle}, #{boardContent}, #{userNumber}, now())
->>>>>>> 373caf5ca7484c90129dc4d794c45a913c5904c7
 	</insert>
 	
 	<!-- 게시글 삭제 -->
@@ -56,23 +39,9 @@
 		where lpnumber = #{lpnumber}
 	</update>
 	
-<<<<<<< HEAD
-	
-=======
-	<!-- 댓글 목록 -->
-	<select id="selectReplies" parameterType="_int" resultType="boardReplyDTO">
-		select replyNumber, boardNumber, r.userNumber, userId, replyContent 
-		from tbl_reply r join tbl_user u 
-		on r.userNumber = u.userNumber and boardNumber = #{boardNumber}
-		order by 1 desc
-	</select>
-	
-	<!-- 댓글 등록 -->
-	<insert id="insertReply" parameterType="boardReplyVO">
-		insert into tbl_reply (boardNumber, userNumber, replyContent) 
-		values(#{boardNumber}, #{userNumber}, #{replyContent})
-	</insert>
->>>>>>> 373caf5ca7484c90129dc4d794c45a913c5904c7
+
+
+
 	
 	
 </mapper>
