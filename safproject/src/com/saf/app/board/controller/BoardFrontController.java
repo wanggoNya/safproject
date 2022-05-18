@@ -1,4 +1,4 @@
-package com.saf.app.board.controller;
+package com.saf.app.user;
 
 import java.io.IOException;
 
@@ -8,9 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.boardMVC.action.ActionForward;
+import com.saf.action.ActionForward;
 
-public class BoardFrontController extends HttpServlet {
+public class UserFrontController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		doProcess(req, resp);
@@ -20,65 +20,54 @@ public class BoardFrontController extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		doProcess(req, resp);
 	}
-
+	
 	protected void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String requestURI = req.getRequestURI();
 		String contextPath = req.getContextPath();
 		String command = requestURI.substring(contextPath.length());
 		ActionForward af = null;
 		
-		switch(command) {
-		case "/board/BoardListOk.bo":
-			af = new BoardListOk().execute(req, resp);
-			break;
-		case "/board/BoardDetailOk.bo":
-			af = new BoardDetailOk().execute(req, resp);
-			break;
-		case "/board/BoardWrite.bo":
-			af = new BoardWrite().execute(req, resp);
-			break;
-		case "/board/BoardWriteOk.bo":
-			af = new BoardWriteOk().execute(req, resp);
-			break;
-		case "/board/BoardDeleteOk.bo":
-			af = new BoardDeleteOk().execute(req, resp);
-			break;
-		case "/board/BoardUpdate.bo":
-			af = new BoardUpdate().execute(req, resp);
-			break;
-		case "/board/BoardUpdateOk.bo":
-			af = new BoardUpdateOk().execute(req, resp);
-			break;
-		case "/board/FileDownloadOk.bo":
-			af = new FileDownloadOk().execute(req, resp);
-			break;
-		case "/board/BoardReplyListOk.bo":
-			new BoardReplyListOk().execute(req, resp);
-			break;
-		case "/board/BoardReplyWriteOk.bo":
-			new BoardReplyWriteOk().execute(req, resp);
-			break;
-		case "/board/BoardReplyDeleteOk.bo":
-			new BoardReplyDeleteOk().execute(req, resp);
-			break;
-		case "/board/BoardReplyUpdateOk.bo":
-			new BoardReplyUpdateOk().execute(req, resp);
-			break;
+		if(command.equals("/user/controller/UserCheckIdOk.us")) {
+			//new UserCheckIdOk().execute(req, resp);
+			
+		}else if(command.equals("/user/controller/UserJoin.us")) {
+			//af = new ActionForward();
+			//af.setRedirect(false);
+			//af.setPath("/app/user/join.jsp");
+			
+		}else if(command.equals("/user/controller/UserJoinOk.us")) {
+			//af = new UserJoinOk().execute(req, resp);
+			
+		}else if(command.equals("/user/controller/UserLogin.us")) {
+			//af = new ActionForward();
+			//af.setRedirect(false);
+			//af.setPath("/app/user/login.jsp");
+			
+		}else if(command.equals("/user/controller/UserLoginOk.us")) {
+			//af = new UserLoginOk().execute(req, resp);
+			
+		}else if(command.equals("/user/controller/UserLogout.us")) {
+			//af = new UserLogout().execute(req, resp);
 		}
 		
-		//분기 별 결과를 af에 담았다면 여기로 내려온다.
-		
-		if(af != null) {// af가 null이 아니라면
-			if(af.isRedirect()) {//redirect 방식이라면
-				resp.sendRedirect(af.getPath());//redirect로 전송
-				
-			}else {//forward 방식이라면
+		//전송안할지
+		if(af != null) {
+			if(af.isRedirect()) {
+				//redirect
+				resp.sendRedirect(af.getPath());
+			}else {
+				//forward
+				//request객체에서 Dispatch을 가져온 뒤, 이동할 경로를 전달한다.
+				//dispatch : 요청과 응답을 관리해주는 객체
 				RequestDispatcher dispatcher = req.getRequestDispatcher(af.getPath());
-				dispatcher.forward(req, resp);//forward로 전송
+				//dispatcher객체에서 forward()를 사용할 때 request와 response객체 둘 다 전달해주면
+				//응답할 화면까지 데이터가 유지된다.
+				dispatcher.forward(req, resp);
 			}
 		}
 	}
 }
+
 
 
 
