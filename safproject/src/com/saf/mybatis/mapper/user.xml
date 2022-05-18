@@ -7,17 +7,11 @@
 	<select id="checkId" parameterType="string" resultType="_int">
 		select count(uid) from user 
 		where uid = #{uid}
-=======
-	<!-- 아이디 중복검사 -->
-	<select id="checkId" parameterType="string" resultType="_int">
-		select count(userId) from tbl_user 
-		where userId = #{userId}
->>>>>>> 373caf5ca7484c90129dc4d794c45a913c5904c7
 	</select>
 	
 	<!-- 회원 가입 -->
 	<insert id="join" parameterType="userVO">
-<<<<<<< HEAD
+
 		insert into user
 		(
 			uid, uphone, upw, uname, uaddr, uemail
@@ -26,23 +20,12 @@
 		values
 		(
 			#{uid}, #{uphone}, #{upw}, #{uname}, #{uaddr}, #{uemail}
-=======
-		insert into tbl_user
-		(
-			userId, userPw, userName, userAge, userGender, userEmail, 
-			userZipcode, userAddress, userAddressDetail
-		)
-		values
-		(
-			#{userId}, #{userPw}, #{userName}, #{userAge}, #{userGender}, #{userEmail},
-			 #{userZipcode}, #{userAddress}, #{userAddressDetail}
->>>>>>> 373caf5ca7484c90129dc4d794c45a913c5904c7
+
 		 )
 	</insert>
 	
 	<!-- 로그인 -->
 	<select id="login" parameterType="map" resultType="_int">
-<<<<<<< HEAD
 		select unum from user where uid=#{uid} and upw=#{upw}
 	</select>
 	
@@ -66,18 +49,12 @@
 		set upw=#{upw}
 		where unum = #{unum}
 	</update>
-=======
+
 		select userNumber from tbl_user where userId=#{userId} and userPw=#{userPw}
 	</select>
 	
-	<!-- 회원 정보 조회 -->
-	<select id="getInfo" parameterType="_int" resultType="userVO">
-		select 
-			userId, userPw, userName, userAge, userGender, userEmail, 
-			userZipcode, userAddress, userAddressDetail 
-		from tbl_user where userNumber = #{userNumber}			
-	</select>
->>>>>>> 373caf5ca7484c90129dc4d794c45a913c5904c7
+	
+
 </mapper>
 
 
