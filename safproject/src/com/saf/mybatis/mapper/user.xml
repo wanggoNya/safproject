@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http//mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="User">
 <<<<<<< HEAD
 
@@ -46,12 +46,10 @@
 	<!-- 비밀번호 수정 -->
 	<update id="update" parameterType="userVO">
 		update user
-		set upw=#{upw}
-		where unum = #{unum}
+		set uPw=#{uPw}
+		where uNum = #{uNum}
 	</update>
 
-		select userNumber from tbl_user where userId=#{userId} and userPw=#{userPw}
-	</select>
 	
 	
 
