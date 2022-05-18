@@ -27,27 +27,17 @@ public class UserFrontController extends HttpServlet {
 		String command = requestURI.substring(contextPath.length());
 		ActionForward af = null;
 		
-		if(command.equals("/user/UserCheckIdOk.me")) {
-			new UserCheckIdOk().execute(req, resp);
+		if(command.equals("/user/controller/UserCheckIdOk.us")) {
+			//new UserCheckIdOk().execute(req, resp);
 			
-		}else if(command.equals("/user/UserJoin.me")) {
-			af = new ActionForward();
-			af.setRedirect(false);
-			af.setPath("/app/user/join.jsp");
+		}else if(command.equals("/user/controller/UserJoinOk.us")) {
+			//af = new UserJoinOk().execute(req, resp);
 			
-		}else if(command.equals("/user/UserJoinOk.me")) {
-			af = new UserJoinOk().execute(req, resp);
+		}else if(command.equals("/user/controller/UserLoginOk.us")) {
+			//af = new UserLoginOk().execute(req, resp);
 			
-		}else if(command.equals("/user/UserLogin.me")) {
-			af = new ActionForward();
-			af.setRedirect(false);
-			af.setPath("/app/user/login.jsp");
-			
-		}else if(command.equals("/user/UserLoginOk.me")) {
-			af = new UserLoginOk().execute(req, resp);
-			
-		}else if(command.equals("/user/UserLogout.me")) {
-			af = new UserLogout().execute(req, resp);
+		}else if(command.equals("/user/controller/UserLogout.us")) {
+			//af = new UserLogout().execute(req, resp);
 		}
 		
 		//전송안할지
