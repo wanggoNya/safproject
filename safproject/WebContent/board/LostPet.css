@@ -145,6 +145,7 @@ body {
 
 .shadow-sm {
     box-shadow: 0 0 35px rgb(140 152 164 / 13%) !important;
+        padding: 10px;
 }
 
 
@@ -158,8 +159,8 @@ body {
     max-width: 33.33333%;
 }
 
-.row {
-    display: -ms-flexbox;
+.row-board {
+    display: -ms-flexbox !important;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-right: -15px;
@@ -167,9 +168,6 @@ body {
     margin-top: 15px;
 }
 
-.te {
-    margin-top: 35px;
-}
 
 @media (min-width:1200px) {
     .container {
@@ -808,14 +806,14 @@ element.style {
 }
 
 
-/* div {
+/* /* div { */
     width: 100%;
     height: 500px;
     
     border: 1px solid #000;
 } */
-div.left {
-    width: 63%;
+div.lb3 {
+    width: 100% !important;
     float: left;
     box-sizing: border-box;
     padding: 50px;
@@ -834,6 +832,14 @@ div.right {
     /* background: #0ff; */
 }
 
+.content {
+	padding: 70px;
+}
 
+.board-image {
+ padding-bottom: 56px;
+}
 
-
+.board-insta {
+	padding-top: 53px;
+}
