@@ -1,13 +1,12 @@
 package com.saf.app.lostpet.vo;
 
-public class LostPetReplyDTO {
+public class LostPetReplyVO {
 	private int replyNumber;
 	private int boardNumber;
 	private int userNumber;
-	private String userId;
 	private String replyContent;
 	
-	public LostPetReplyDTO() {;}
+	public LostPetReplyVO() {;}
 
 	public int getReplyNumber() {
 		return replyNumber;
@@ -31,14 +30,6 @@ public class LostPetReplyDTO {
 
 	public void setUserNumber(int userNumber) {
 		this.userNumber = userNumber;
-	}
-	
-	public String getUserId() {
-		return userId;
-	}
-
-	public void setUserId(String userId) {
-		this.userId = userId;
 	}
 
 	public String getReplyContent() {

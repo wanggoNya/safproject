@@ -9,12 +9,12 @@ import java.util.stream.Collectors;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.boardMVC.action.Action;
-import com.boardMVC.action.ActionForward;
-import com.boardMVC.app.board.dao.BoardDAO;
-import com.boardMVC.app.board.vo.BoardDTO;
-import com.boardMVC.app.board.vo.BoardVO;
-import com.boardMVC.app.member.dao.MemberDAO;
+import com.saf.action.Action;
+import com.saf.action.ActionForward;
+import com.saf.app.board.dao.BoardDAO;
+import com.saf.app.board.vo.BoardDTO;
+import com.saf.app.board.vo.BoardVO;
+import com.saf.app.user.dao.UserDAO;
 
 public class BoardListOk implements Action{
 

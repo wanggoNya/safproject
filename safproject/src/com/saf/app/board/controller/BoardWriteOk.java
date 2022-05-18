@@ -19,7 +19,7 @@ public class BoardWriteOk implements Action {
 	@Override
 	public ActionForward execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		
-		String uploadFolder = "D:\\aigb_0900_hds\\jsp\\workspace\\boardMVC\\WebContent\\upload";
+		String uploadFolder = "D:\\aigb_0900_hds\\jsp\\workspace\\boardMVC\\WebContent\\upload";//변경할것
 		int fileSize = 1024 * 1024 * 5;//5M
 		LostPetDAO bDao = new LostPetDAO();
 		FilesDAO fDao = new FilesDAO();
@@ -31,7 +31,7 @@ public class BoardWriteOk implements Action {
 		
 		board.setBoardTitle(multi.getParameter("boardTitle"));
 		board.setBoardContent(multi.getParameter("boardContent"));
-		board.setMemberNumber((Integer)req.getSession().getAttribute("memberNumber"));
+		board.setUserNumber((Integer)req.getSession().getAttribute("userNumber"));
 		
 		//게시글 추가
 		bDao.insert(board);

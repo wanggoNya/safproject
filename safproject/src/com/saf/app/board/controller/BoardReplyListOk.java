@@ -34,8 +34,8 @@ public class BoardReplyListOk implements Action {
 			JSONObject reply = new JSONObject();
 			reply.put("replyNumber", r.getReplyNumber());
 			reply.put("boardNumber", r.getBoardNumber());
-			reply.put("memberNumber", r.getMemberNumber());
-			reply.put("memberId", r.getMemberId());
+			reply.put("userNumber", r.getUserNumber());
+			reply.put("userId", r.getUserId());
 			reply.put("replyContent", r.getReplyContent());
 			replies.add(reply);
 		}

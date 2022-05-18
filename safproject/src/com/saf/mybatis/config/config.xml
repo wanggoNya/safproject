@@ -9,7 +9,7 @@
 		<typeAlias type="com.saf.app.board.vo.BoardVO" alias="boardVO"/>
 		<typeAlias type="com.saf.app.board.vo.BoardDTO" alias="boardDTO"/>
 		<typeAlias type="com.saf.app.board.vo.BoardFileVO" alias="boardFileVO"/>
-		<typeAlias type="com.saf.app.lostpet.vo.LostpetReplyVO" alias="lostpetReplyVO"/>
+		<typeAlias type="com.saf.app.lostpet.vo.LostPetReplyVO" alias="lostpetReplyVO"/>
 		<typeAlias type="com.saf.app.lostpet.vo.LostpetReplyDTO" alias="lostpetReplyDTO"/>
 		<typeAlias type="com.saf.app.lostpet.vo.LostpetVO" alias="lostpetVO"/>
 		<typeAlias type="com.saf.app.lostpet.vo.LostpetDTO" alias="lostpetDTO"/>

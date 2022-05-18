@@ -3,8 +3,8 @@ package com.saf.app.board.vo;
 public class BoardReplyDTO {
 	private int replyNumber;
 	private int boardNumber;
-	private int memberNumber;
-	private String memberId;
+	private int userNumber;
+	private String userId;
 	private String replyContent;
 	
 	public BoardReplyDTO() {;}
@@ -25,20 +25,20 @@ public class BoardReplyDTO {
 		this.boardNumber = boardNumber;
 	}
 
-	public int getMemberNumber() {
-		return memberNumber;
+	public int getUserNumber() {
+		return userNumber;
 	}
 
-	public void setMemberNumber(int memberNumber) {
-		this.memberNumber = memberNumber;
+	public void setUserNumber(int userNumber) {
+		this.userNumber = userNumber;
 	}
 	
-	public String getMemberId() {
-		return memberId;
+	public String getUserId() {
+		return userId;
 	}
 
-	public void setMemberId(String memberId) {
-		this.memberId = memberId;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 
 	public String getReplyContent() {
