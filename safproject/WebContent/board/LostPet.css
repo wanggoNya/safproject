@@ -833,7 +833,9 @@ div.right {
 }
 
 .content {
-	padding: 70px;
+
+   padding: 70px;
+
 }
 
 .board-image {
@@ -841,5 +843,7 @@ div.right {
 }
 
 .board-insta {
+
 	padding-top: 53px;
 }
+
