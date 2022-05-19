@@ -21,9 +21,9 @@ public class LostPetWriteOk implements Action {
 		
 		String uploadFolder = "D:\\aigb_0900_hds\\jsp\\workspace\\boardMVC\\WebContent\\upload";
 		int fileSize = 1024 * 1024 * 5;//5M
-		LostPetDAO bDao = new LostPetDAO();
+		BoardDAO bDao = new BoardDAO();
 		FilesDAO fDao = new FilesDAO();
-		LostPetVO board = new LostPetVO();
+		BoardVO board = new BoardVO();
 		ActionForward af = new ActionForward();
 		
 		//요청객체, 업로드폴더 경로, 파일의 크기, 인코딩 방식, 이름변경정책

@@ -13,10 +13,10 @@ public class LostPetDTO {
 	
 	public LostPetDTO() {;}
 
-	public LostPetDTO(LostPetVO boardVO) {
+	public LostPetDTO(BoardVO boardVO) {
 		super();
 		this.userNumber = boardVO.getUserNumber();
-		this.boardNumber = boardVO.getBoardNumber();
+		this.boardNumber = boardVO.getBnumber();
 		this.boardTitle = boardVO.getBoardTitle();
 		this.boardContent = boardVO.getBoardContent();
 		this.boardDate = boardVO.getBoardDate();

@@ -22,8 +22,8 @@ public class LostPetUpdateOk implements Action {
 	@Override
 	public ActionForward execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		
-		LostPetVO board = new LostPetVO();
-		LostPetDAO bDao = new LostPetDAO();
+		BoardVO board = new BoardVO();
+		BoardDAO bDao = new BoardDAO();
 		List<FilesVO> files = null;
 		FilesDAO fDao = new FilesDAO();
 		ActionForward af = new ActionForward();
@@ -39,7 +39,7 @@ public class LostPetUpdateOk implements Action {
 		boardNumber = Integer.parseInt(multi.getParameter("boardNumber"));
 		board.setBoardTitle(multi.getParameter("boardTitle"));
 		board.setBoardContent(multi.getParameter("boardContent"));
-		board.setBoardNumber(boardNumber);
+		board.setBnumber(boardNumber);
 		
 		files = fDao.select(boardNumber);
 		

@@ -18,7 +18,7 @@ public class LostPetUpdate implements Action{
 		int boardNumber = Integer.parseInt(req.getParameter("boardNumber"));
 		ActionForward af = new ActionForward();
 		
-		LostPetDAO dao = new LostPetDAO();
+		BoardDAO dao = new BoardDAO();
 		
 		// 회원의 번호로 게시글의 정보 뿐만 아니라 회원의 아이디까지 가져와주는 쿼리 실행
 		req.setAttribute("board", dao.selectDetail(boardNumber));

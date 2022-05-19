@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.json.simple.JSONObject;
 
-import com.saf.app.action.Action;
-import com.saf.app.action.ActionForward;
+import com.saf.action.Action;
+import com.saf.action.ActionForward;
 import com.saf.app.user.dao.UserDAO;
 
 public class UserCheckIdOk implements Action{
@@ -17,17 +17,19 @@ public class UserCheckIdOk implements Action{
 	@Override
 	public ActionForward execute(HttpServletRequest req, HttpServletResponse resp) throws IOException{
 		
-		String uid = req.getParameter("uid");
+		String userId = req.getParameter("userId");
 		UserDAO dao = new UserDAO();
 		PrintWriter out = resp.getWriter();
 		JSONObject obj = new JSONObject();
 		
+
 		if(dao.checkId(uid)) {
-			//¾ÆÀÌµğ°¡ Áßº¹µÇ¾úÀ» ¶§
+			//ì•„ì´ë””ê°€ ì¤‘ë³µë˜ì—ˆì„ ë•Œ
+
 //			out.print("not-ok");
 			obj.put("status", "not-ok");
 		}else {
-			// »ç¿ë °¡´ÉÇÑ ¾ÆÀÌµğÀÏ ¶§
+			// ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½ ï¿½ï¿½
 //			out.print("ok");
 			obj.put("status", "ok");
 		}

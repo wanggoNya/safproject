@@ -44,7 +44,7 @@ public class FilesDAO {
 
 			file.setFileName(fileName);
 			file.setFileNameOriginal(fileNameOriginal);
-			file.setBoardNumber(boardNumber);
+			file.setBnumber(boardNumber);
 			
 			insert(file);
 		}
