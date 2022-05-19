@@ -7,7 +7,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.boardMVC.action.Action;
+import com.saf.action.Action;
 import com.boardMVC.action.ActionForward;
 import com.boardMVC.app.board.dao.BoardDAO;
 import com.boardMVC.app.board.dao.FilesDAO;

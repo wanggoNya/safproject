@@ -17,12 +17,12 @@ public class UserCheckIdOk implements Action{
 	@Override
 	public com.saf.app.action.ActionForward execute(HttpServletRequest req, HttpServletResponse resp) throws IOException{
 		
-		String uId = req.getParameter("uId");
+		String uid = req.getParameter("uid");
 		UserDAO dao = new UserDAO();
 		PrintWriter out = resp.getWriter();
 		JSONObject obj = new JSONObject();
 		
-		if(dao.checkId(uId)) {
+		if(dao.checkId(uid)) {
 			//아이디가 중복되었을 때
 //			out.print("not-ok");
 			obj.put("status", "not-ok");

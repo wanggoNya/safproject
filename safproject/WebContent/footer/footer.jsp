@@ -12,7 +12,7 @@
 <body>
     <footer class="footer-container" style="background-color: #F9F9F9; color: #BDBDBD">
         <div class="container">
-                <div class="row footer-detail">
+                <div class="foot-row footer-detail">
                     <div class="col content-1">
                         <p class="content-detail">
                             <span class="content-detail-1 font-weight-bold">(사)애니멀스트릿파인더</span>

@@ -2,7 +2,7 @@ package com.saf.app.lostpet.vo;
 
 public class LostPetReplyVO {
 	private int replyNumber;
-	private int boardNumber;
+	private int lostpetNumber;
 	private int userNumber;
 	private String replyContent;
 	
@@ -12,16 +12,16 @@ public class LostPetReplyVO {
 		return replyNumber;
 	}
 
-	public void setReplyNumber(int replyNumber) {
-		this.replyNumber = replyNumber;
+	public void setReplyNumber(int replyNnumber) {
+		this.replyNumber = replyNnumber;
 	}
 
-	public int getBoardNumber() {
-		return boardNumber;
+	public int getLostpetNumber() {
+		return lostpetNumber;
 	}
 
-	public void setBoardNumber(int boardNumber) {
-		this.boardNumber = boardNumber;
+	public void setBoardNumber(int lostpetNumber) {
+		this.lostpetNumber = lostpetNumber;
 	}
 
 	public int getUserNumber() {
