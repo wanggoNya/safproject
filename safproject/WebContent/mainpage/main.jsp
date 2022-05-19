@@ -14,7 +14,7 @@
 </head>
 <body>
   <jsp:include page="/header/header.jsp"/>
-	<section class="main_banner">
+	<section class="main_banner"> 
         <div class="back_div" style="height: 400px; background-color: #019267;">
             <div class="swiper-slide" style="background-color: #019267;"></div>
         </div>
