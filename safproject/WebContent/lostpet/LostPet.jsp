@@ -16,7 +16,7 @@
     <div class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll loaded dzsprx-readyall g-bg-cover"
         data-options="{direction: &quot;reverse&quot;, animation_duration: 25, direction: &quot;reverse&quot;}">
         <div class="divimage dzsparallaxer--target w-100 u-bg-overlay g-bg-img-hero g-bg-black-opacity-0_3--after"
-            style="height: 130%; background-image: url(/teamproject/WebContent/file/getBlob/130690_90612_406.jpg); transform: translate3d(0px, -90px, 0px);">
+            style="height: 130%; background-image: url(${pageContext.request.contextPath}/file/getBlob/130690_90612_406.jpg); transform: translate3d(0px, -90px, 0px);">
             ::before
             ::after
         </div>
@@ -294,6 +294,7 @@
         var mapContainer = document.getElementById(img), // 지도를 표시할 div 
             mapOption = {
                 center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+                draggable: false,
                 level: 3 // 지도의 확대 레벨
             };
 
@@ -315,6 +316,7 @@
 
         // 지도에 원을 표시합니다 
         circle.setMap(map);
+        
     }
 </script>
 
