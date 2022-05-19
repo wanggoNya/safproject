@@ -1,6 +1,6 @@
 package com.saf.app.lostpet.vo;
 
-public class LostPetVO {
+public class BoardVO {
 	private int lpnumber;
 	private String lparea1;
 	private String lparea2;
@@ -94,11 +94,11 @@ public class LostPetVO {
 		this.unum = unum;
 	}
 	
-	public LostPetVO(){
+	public BoardVO(){
 		
 	}
 	
-	public LostPetVO(int lpnumber, String lparea1, String lparea2, String lparea3, String lpspecies, String lpgender,
+	public BoardVO(int lpnumber, String lparea1, String lparea2, String lparea3, String lpspecies, String lpgender,
 			String lpcolor, String lpbreed, String lpimage, int lpstatus, String lptime, String lpcontent, int unum) {
 		super();
 		this.lpnumber = lpnumber;

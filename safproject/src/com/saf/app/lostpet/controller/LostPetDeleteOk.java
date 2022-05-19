@@ -19,7 +19,7 @@ public class LostPetDeleteOk implements Action{
 		
 		String uploadFolder = "D:\\aigb_0900_hds\\jsp\\workspace\\boardMVC\\WebContent\\upload";
 		int boardNumber = Integer.parseInt(req.getParameter("boardNumber"));
-		LostPetDAO bDao = new LostPetDAO();
+		BoardDAO bDao = new BoardDAO();
 		FilesDAO fDao = new FilesDAO();
 		ActionForward af = new ActionForward();
 		

@@ -22,7 +22,7 @@ public class LostPetListOk implements Action{
 	public ActionForward execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		HashMap<String, Integer> boardMap = new HashMap<>();
 		ActionForward af = new ActionForward();
-		LostPetDAO dao = new LostPetDAO();
+		BoardDAO dao = new BoardDAO();
 //		BoardDAO bDao = new BoardDAO();
 //		MemberDAO mDao = new MemberDAO();
 

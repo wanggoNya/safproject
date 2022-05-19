@@ -5,12 +5,12 @@ import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.boardMVC.action.Action;
-import com.boardMVC.action.ActionForward;
-import com.boardMVC.app.board.dao.BoardDAO;
-import com.boardMVC.app.board.dao.FilesDAO;
-import com.boardMVC.app.board.vo.BoardVO;
-import com.boardMVC.app.board.vo.FilesVO;
+import com.saf.action.Action;
+import com.saf.action.ActionForward;
+import com.saf.app.board.dao.BoardDAO;
+import com.saf.app.board.dao.FilesDAO;
+import com.saf.app.board.vo.BoardVO;
+import com.saf.app.board.vo.FilesVO;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
@@ -21,17 +21,17 @@ public class BoardWriteOk implements Action {
 		
 		String uploadFolder = "D:\\aigb_0900_hds\\jsp\\workspace\\boardMVC\\WebContent\\upload";//변경할것
 		int fileSize = 1024 * 1024 * 5;//5M
-		LostPetDAO bDao = new LostPetDAO();
+		BoardDAO bDao = new BoardDAO();
 		FilesDAO fDao = new FilesDAO();
-		LostPetVO board = new LostPetVO();
+		BoardVO board = new BoardVO();
 		ActionForward af = new ActionForward();
 		
 		//요청객체, 업로드폴더 경로, 파일의 크기, 인코딩 방식, 이름변경정책
 		MultipartRequest multi = new MultipartRequest(req, uploadFolder, fileSize, "UTF-8", new DefaultFileRenamePolicy());
 		
-		board.setBoardTitle(multi.getParameter("boardTitle"));
-		board.setBoardContent(multi.getParameter("boardContent"));
-		board.setUserNumber((Integer)req.getSession().getAttribute("userNumber"));
+		board.setBtitle(multi.getParameter("btitle"));
+		board.setBcontent(multi.getParameter("bcontent"));
+		board.setUnum((Integer)req.getSession().getAttribute("unum"));
 		
 		//게시글 추가
 		bDao.insert(board);
