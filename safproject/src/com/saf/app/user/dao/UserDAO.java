@@ -37,27 +37,27 @@ public class UserDAO {
 		return userNumber;
 	}
 
-	// �쉶�썝 �젙蹂� 議고쉶
+	// 회원정보조회
 	public UserVO getInfo(int userNumber) {
 		return sqlSession.selectOne("User.getInfo", userNumber);
 	}
 
-	// �봽濡쒗븘 蹂�寃�
+	// 프로필수정
 	public void updateUserProfile(UserVO user) {
 		sqlSession.update("User.updateUserProfile", user);
 	}
 
-	// �쉶�썝 �젙蹂� �닔�젙
+	// 회원정보수정
 	public void updateUser(UserVO user) {
 		sqlSession.update("User.updateUser", user);
 	}
 
-	// 鍮꾨�踰덊샇 蹂�寃�
+	// 비밀번호변경
 	public void updateUpw(UserVO user) {
 		sqlSession.update("User.updateUser", user);
 	}
 
-	// �쉶�썝 �깉�눜
+	// 회원탈퇴
 	public void delUser(UserVO user) {
 		sqlSession.update("User.updateUser", user);
 	}
