@@ -4,34 +4,55 @@
 
 	<!-- 아이디 중복검사 -->
 	<select id="checkId" parameterType="string" resultType="_int">
-		select count(uid) from user 
-		where uid = #{uid}
+		select count(uId) from user 
+		where uId = #{uId}
 	</select>
 	
 	<!-- 회원 가입 -->
 	<insert id="join" parameterType="userVO">
-		insert into user (unum, uid, uphone, upw, uname, uaddr, uemail)
-		values (#{unum}, #{uid}, #{uphone}, #{upw}, #{uname}, #{uaddr}, {uemail})
+		insert into user (uNum, uId, uPhone, uPw, uName, uAddr, uEmail)
+		values (#{uNum}, #{uId}, #{uPhone}, #{uPw}, #{uName}, #{uAddr}, {uEmail})
 		
 	</insert>
 	
 	<!-- 로그인 -->
 	<select id="login" parameterType="map" resultType="_int">
-		select unum from user where uid=#{uid} and upw=#{upw}
+		select uNum from user where uId=#{uId} and uPw=#{uPw}
 	</select>
 	
+	<!-- 회원 정보 수정 -->
+	<update id="updateUserProfile" parameterType="userVO">
+		update user
+		set uPhone=#{uPhone}, uAddr=#{uAddr}, uEmail=#{uEmail}
+		where uNum = #{uNum}
+	</update>
+	
+	
+	<!-- 프로필 변경 -->
+	<update id="updateUserProfile" parameterType="userVO">
+		update user
+		set uImage=#{uImage}, uNickname=#{uNickname}
+		where uNum = #{uNum}
+	</update>
 
 	<!-- 회원 정보 수정 -->
 	<update id="updateUser" parameterType="userVO">
 		update user
-		set uphone=#{uphone}, uaddr=#{uaddr}, uemail=#{uemail}
-		where lpnumber = #{lpnumber}
+		set uPhone=#{uPhone}, uAddr=#{uAddr}, uEmail=#{uEmail}
+		where uNum = #{uNum}
 	</update>
 	
-	<!-- 비밀번호 수정 -->
-	<update id="updatePw" parameterType="userVO">
+	<!-- 비밀번호 변경 -->
+	<update id="updateUpw" parameterType="userVO">
 		update user
 		set uPw=#{uPw}
+		where uNum = #{uNum}
+	</update>
+	
+	<!-- 회원탈퇴 -->
+	<update id="delUser" parameterType="userVO">
+		update user
+		set uStatus= 0
 		where uNum = #{uNum}
 	</update>
 
