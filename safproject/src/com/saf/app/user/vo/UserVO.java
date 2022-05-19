@@ -4,10 +4,12 @@ public class UserVO {
 
 	private int unum;
 	private String uid;
-	private String uphone;
 	private String upw;
+	private String uphone;
+	private String uimage;
 	private String uname;
-	private String uaddr;
+	private String uaddr1;
+	private String uaddr2;
 	private String uemail;
 	
 	public int getUnum() {
@@ -22,21 +24,23 @@ public class UserVO {
 	public void setUid(String uid) {
 		this.uid = uid;
 	}
+	public String getUpw() {
+		return upw;
+	}
+	public void setUpw(String upw) {
+		this.upw = upw;
+	}
 	public String getUphone() {
 		return uphone;
 	}
 	public void setUphone(String uphone) {
 		this.uphone = uphone;
 	}
-
 	public String getUimage() {
 		return uimage;
-
-	public String getUpw() {
-		return upw;
 	}
-	public void setUpw(String upw) {
-		this.upw = upw;
+	public void setUimage(String uimage) {
+		this.uimage = uimage;
 	}
 	public String getUname() {
 		return uname;
@@ -44,11 +48,17 @@ public class UserVO {
 	public void setUname(String uname) {
 		this.uname = uname;
 	}
-	public String getUaddr() {
-		return uaddr;
+	public String getUaddr1() {
+		return uaddr1;
 	}
-	public void setUaddr(String uaddr) {
-		this.uaddr = uaddr;
+	public void setUaddr1(String uaddr1) {
+		this.uaddr1 = uaddr1;
+	}
+	public String getUaddr2() {
+		return uaddr2;
+	}
+	public void setUaddr2(String uaddr2) {
+		this.uaddr2 = uaddr2;
 	}
 	public String getUemail() {
 		return uemail;
@@ -61,23 +71,16 @@ public class UserVO {
 		
 	}
 	
-	public UserVO(int unum, String uid, String uphone, String upw, String uname, String uaddr, String uemail) {
+	public UserVO(int unum, String uid, String upw, String uimage, String uphone, String uname, String uaddr1, String uaddr2, String uemail) {
 		super();
 		this.unum = unum;
 		this.uid = uid;
-		this.uphone = uphone;
 		this.upw = upw;
+		this.uimage = uimage;
+		this.uphone = uphone;
 		this.uname = uname;
-		this.uaddr = uaddr;
+		this.uaddr1 = uaddr1;
+		this.uaddr2 = uaddr2;
 		this.uemail = uemail;
 	}
-
 }
-
-
-
-
-
-
-
-
