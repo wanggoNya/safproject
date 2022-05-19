@@ -8,21 +8,21 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.json.simple.JSONObject;
 
-import com.saf.action.Action;
-import com.saf.action.ActionForward;
+import com.saf.app.action.Action;
+import com.saf.app.action.ActionForward;
 import com.saf.app.user.dao.UserDAO;
 
 public class UserCheckIdOk implements Action{
 
 	@Override
-	public ActionForward execute(HttpServletRequest req, HttpServletResponse resp) throws IOException{
+	public com.saf.app.action.ActionForward execute(HttpServletRequest req, HttpServletResponse resp) throws IOException{
 		
-		String userId = req.getParameter("userId");
+		String uId = req.getParameter("uId");
 		UserDAO dao = new UserDAO();
 		PrintWriter out = resp.getWriter();
 		JSONObject obj = new JSONObject();
 		
-		if(dao.checkId(userId)) {
+		if(dao.checkId(uId)) {
 			//아이디가 중복되었을 때
 //			out.print("not-ok");
 			obj.put("status", "not-ok");

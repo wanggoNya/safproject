@@ -10,7 +10,7 @@ import com.saf.app.action.ActionForward;
 import com.saf.app.user.dao.UserDAO;
 import com.saf.app.user.vo.UserVO;
 
-public class UserJoinOk implements Action{
+public class UserUpdateProfileOK implements Action{
 
 	@Override
 	public ActionForward execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -21,20 +21,17 @@ public class UserJoinOk implements Action{
 		UserDAO dao = new UserDAO();
 		
 		
-		user.setUnum(Integer(req.getParameter("uNum")));
-		user.setUid(req.getParameter("uid"));
-		user.setUphone(req.getParameter("uphone"));
-		user.setUpw(req.getParameter("userPw"));
-		user.setUname(req.getParameter("userName"));
-		user.setUaddr(req.getParameter("uaddr"));
-		user.setUemail(req.getParameter("uemail"));
 		
-		dao.join(user);
+		user.setUimage(req.getParameter("uimage"));
+		user.setUnickname(req.getParameter("unickname"));
+
+		
+		dao.updateUserProfile(user);
 		
 		af.setRedirect(true);
 		//redirect로 전송할 때 contextPath가 사라지기 때문에
 		//미리 붙여놓고 전송한다.
-		af.setPath(req.getContextPath() + "/user/UserLogin.me");
+		af.setPath(req.getContextPath() + "/user/Userupdateprofile.me");
 		
 		return af;
 	}
