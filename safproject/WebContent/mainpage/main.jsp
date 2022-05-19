@@ -63,14 +63,14 @@
         <div class="find_btn">
             <div class="find_text">
                 <span class="f_text" style="padding-top: 40px; border: 2px solid;">
-                    <a href="" style="padding-top: 37px; color: #019267; text-decoration: none;">실종동물찾기</a>
+                    <a href="${pageContext.request.contextPath}/lostpet/LostPet.jsp" style="padding-top: 37px; color: #019267; text-decoration: none;">실종동물찾기</a>
                 </span>
             </div>
         </div>
         <div class="find_desc" style="background-color: #00C879;">
             <div class="desc_row">
                 <div class="desc_col">
-                    <a href="">
+                    <a href="${pageContext.request.contextPath}/lostpet/LostPet.jsp">
                         <span class="col_text" style="font-size: 15px;">
                             스트릿애니멀파인더는 여러분의 슬기로운 반려동물과의 생활을 응원합니다~<br/> 
                             잃어버린 반려동물을 찾아야 한다면 스트릿애니멀파인더와 함께!
@@ -93,21 +93,21 @@
                 </li>
     
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="${pageContext.request.contextPath}/lostpet/LostPet.jsp">
                         <img src="icon_2.png" style="width: 62px"><br />
                         <span class="g-font-size-12">실종동물 찾기</span>
                     </a>
                 </li>
     
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="${pageContext.request.contextPath}/board/new-list.jsp">
                         <img src="icon_3.png" style="width: 62px"><br />
                         <span class="g-font-size-12">커뮤니티</span>
                     </a>
                 </li>
     
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="border-right: solid 1px transparent!important;">
+                    <a class="nav-link" href="${pageContext.request.contextPath}/faq/faq.jsp" style="border-right: solid 1px transparent!important;">
                         <img src="icon_1.png" style="width: 62px"><br />
                         <span class="g-font-size-12">전문가FAQ</span>
                     </a>
@@ -179,7 +179,7 @@
         </div>
 
         <div class="subs_container">
-            <a href="#" class="subs_btn" style="background-color: #6AAAE4;">실종동물 더 찾아보기</a>
+            <a href="${pageContext.request.contextPath}/lostpet/LostPet.jsp" class="subs_btn" style="background-color: #6AAAE4;">실종동물 더 찾아보기</a>
         </div>
     </section>
     <div id="footer"></div>
