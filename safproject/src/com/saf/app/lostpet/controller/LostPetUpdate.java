@@ -2,12 +2,12 @@ package com.saf.app.lostpet.controller;
 
 import java.io.IOException;
 
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.saf.app.action.*;
-import com.saf.app.lostpet.dao.*;
+import com.boardMVC.action.Action;
+import com.boardMVC.action.ActionForward;
+import com.boardMVC.app.board.dao.BoardDAO;
 
 public class LostPetUpdate implements Action{
 	
@@ -15,17 +15,17 @@ public class LostPetUpdate implements Action{
 	public ActionForward execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
 		int page = Integer.parseInt(req.getParameter("page"));
-		int lpnumber = Integer.parseInt(req.getParameter("lpnumber"));
+		int boardNumber = Integer.parseInt(req.getParameter("boardNumber"));
 		ActionForward af = new ActionForward();
 		
-		LostPetDAO dao = new LostPetDAO();
+		BoardDAO dao = new BoardDAO();
 		
-		// 회원의 번호로 실종동물의 정보 뿐만 아니라 회원의 아이디까지 가져와주는 쿼리 실행
-		req.setAttribute("lostpet", dao.selectDetail(lpnumber));
+		// 회원의 번호로 게시글의 정보 뿐만 아니라 회원의 아이디까지 가져와주는 쿼리 실행
+		req.setAttribute("board", dao.selectDetail(boardNumber));
 		req.setAttribute("page", page);
 		
 		af.setRedirect(false);
-		af.setPath("/app/lostpet/lostpetUpdate.jsp");
+		af.setPath("/app/board/boardUpdate.jsp");
 		
 		return af;
 	}

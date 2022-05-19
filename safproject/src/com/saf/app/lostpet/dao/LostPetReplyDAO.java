@@ -5,10 +5,9 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
-import com.saf.app.action.*;
-import com.saf.app.lostpet.dao.*; 
-import com.saf.app.lostpet.vo.*; 
-import com.saf.mybatis.config.MyBatisConfig;
+import com.boardMVC.app.board.vo.BoardReplyDTO;
+import com.boardMVC.app.board.vo.BoardReplyVO;
+import com.boardMVC.mybatis.config.MyBatisConfig;
 
 public class LostPetReplyDAO {
 	SqlSessionFactory sqlSessionFactory = MyBatisConfig.getSqlsessoinFactory();
@@ -19,22 +18,22 @@ public class LostPetReplyDAO {
 	}
 	
 	//댓글 목록
-	public List<LostPetReplyDTO> selectReplies(int lpnumber) {
-		return sqlSession.selectList("Lostpet.selectReplies", lpnumber);
+	public List<LostPetReplyDTO> selectReplies(int boardNumber) {
+		return sqlSession.selectList("Board.selectReplies", boardNumber);
 	}
 	
 	//댓글 등록
 	public void insertReply(LostPetReplyVO reply) {
-		sqlSession.insert("Lostpet.insertReply", reply);
+		sqlSession.insert("Board.insertReply", reply);
 	}
 	
 	//댓글 삭제
 	public void deleteReply(int replyNumber) {
-		sqlSession.delete("Lostpet.deleteReply", replyNumber);
+		sqlSession.delete("Board.deleteReply", replyNumber);
 	}
 	
 	//댓글 수정
 	public void updateReply(LostPetReplyVO reply) {
-		sqlSession.update("Lostpet.updateReply", reply);
+		sqlSession.update("Board.updateReply", reply);
 	}
 }

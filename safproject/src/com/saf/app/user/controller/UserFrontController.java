@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.saf.app.action.ActionForward;
+import com.saf.action.ActionForward;
 
 public class UserFrontController extends HttpServlet {
 	@Override

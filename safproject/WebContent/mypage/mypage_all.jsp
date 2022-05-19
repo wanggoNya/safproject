@@ -14,9 +14,9 @@
 
     <div class="header-wrap">
         <div>
-            <div class="topImageSection" style="height: 250px;">
-                <div class="img_div">
-                    <img src="https://prodkrsahsitappadminblob.blob.core.windows.net/2019-01-singleimage-production/279d2ded-3e88-4cc5-8e9b-d8638c3b35ee-일시후원2019.png" id="ctl00_topImage" style="min-width:1000px;height:250px;cursor:pointer;" onclick="move2TopImageLink()">
+            <div class="topImageSection" style="height:250px;">
+                <div class="img_div"> 
+                    <img src="https://prodkrsahsitappadminblob.blob.core.windows.net/2019-01-singleimage-production/279d2ded-3e88-4cc5-8e9b-d8638c3b35ee-일시후원2019.png" id="ctl00_topImage" style="min-width:1000px; height:250px; cursor:pointer;" onclick="move2TopImageLink()">
                 </div>
                 <div class="logo_img">
                     <h1 id="logoImg" class="logo_title">

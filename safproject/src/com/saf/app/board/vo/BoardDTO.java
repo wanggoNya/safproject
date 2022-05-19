@@ -3,79 +3,77 @@ package com.saf.app.board.vo;
 // 나는 기존 테이블의 컬럼의 변형 또는 이외의 연산이 있을 경우에는
 // 클래스이름 뒤에 DTO를 붙이겠다.
 public class BoardDTO {
-	private int boardNumber;
-	private String boardTitle;
-	private String boardContent;
-	private int userNumber;
-	private String userId;
-	private String boardDate;
-	private int readCount;
+	private int bnumber;
+	private String btitle;
+	private String bcontent;
+	private int unum;
+	private String bdate;
+	private String bimage;
+	//private String userId;
+	//private int readCount;
 	
 	public BoardDTO() {;}
 
 	public BoardDTO(BoardVO boardVO) {
 		super();
-		this.userNumber = boardVO.getUserNumber();
-		this.boardNumber = boardVO.getBoardNumber();
-		this.boardTitle = boardVO.getBoardTitle();
-		this.boardContent = boardVO.getBoardContent();
-		this.boardDate = boardVO.getBoardDate();
-		this.readCount = boardVO.getReadCount();
+		this.unum = boardVO.getUnum();
+		this.bnumber = boardVO.getBnumber();
+		this.btitle = boardVO.getBtitle();
+		this.bcontent = boardVO.getBcontent();
+		this.bdate = boardVO.getBdate();
+		this.bimage = boardVO.getBimage();
+		//this.readCount = boardVO.getReadCount();
 	}
 
-	public int getBoardNumber() {
-		return boardNumber;
+	public int getBnumber() {
+		return bnumber;
 	}
 
-	public void setBoardNumber(int boardNumber) {
-		this.boardNumber = boardNumber;
+	public void setBnumber(int bnumber) {
+		this.bnumber = bnumber;
 	}
 
-	public String getBoardTitle() {
-		return boardTitle;
+	public String getBtitle() {
+		return btitle;
 	}
 
-	public void setBoardTitle(String boardTitle) {
-		this.boardTitle = boardTitle;
+	public void setBtitle(String btitle) {
+		this.btitle = btitle;
 	}
 
-	public String getBoardContent() {
-		return boardContent;
+	public String getBcontent() {
+		return bcontent;
 	}
 
-	public void setBoardContent(String boardContent) {
-		this.boardContent = boardContent;
+	public void setBcontent(String bcontent) {
+		this.bcontent = bcontent;
 	}
 
-	public int getUserNumber() {
-		return userNumber;
+	public int getUnum() {
+		return unum;
 	}
 
-	public void setUserNumber(int userNumber) {
-		this.userNumber = userNumber;
+	public void setUnum(int unum) {
+		this.unum = unum;
 	}
 
-	public String getUserId() {
-		return userId;
+	public String getBdate() {
+		return bdate;
 	}
 
-	public void setUserId(String userId) {
-		this.userId = userId;
+	public void setBdate(String bdate) {
+		this.bdate = bdate;
+	}
+	
+	public String getBimage() {
+		return bimage;
 	}
 
-	public String getBoardDate() {
-		return boardDate;
+	public void setBimage(String bimage) {
+		this.bimage = bimage;
 	}
+	
+	
 
-	public void setBoardDate(String boardDate) {
-		this.boardDate = boardDate;
-	}
-
-	public int getReadCount() {
-		return readCount;
-	}
-
-	public void setReadCount(int readCount) {
-		this.readCount = readCount;
-	}
+	
 }
