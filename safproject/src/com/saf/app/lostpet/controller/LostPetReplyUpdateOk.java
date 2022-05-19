@@ -5,10 +5,10 @@ import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.boardMVC.action.Action;
-import com.boardMVC.action.ActionForward;
-import com.boardMVC.app.board.dao.BoardReplyDAO;
-import com.boardMVC.app.board.vo.BoardReplyVO;
+import com.saf.app.action.*;
+import com.saf.app.lostpet.dao.*;
+import com.saf.app.lostpet.vo.*; 
+
 
 public class LostPetReplyUpdateOk implements Action {
 
