@@ -25,7 +25,7 @@ public class LostPetWrite implements Action{
 		req.setAttribute("uid", userId);
 		
 		af.setRedirect(false);
-		af.setPath("/lostpet/fine_write.jsp");
+		af.setPath("/app/lostpet/lostpetWrite.jsp");
 		
 		return af;
 	}

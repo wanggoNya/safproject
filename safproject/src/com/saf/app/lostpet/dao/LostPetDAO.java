@@ -58,9 +58,9 @@ public class LostPetDAO {
 		sqlSession.update("Lostpet.update", board);
 	}
 	
-	//최근 실종동물 번호
-	public int getSeq() {
-		return sqlSession.selectOne("Lostpet.getSeq");
-	}
+//	//최근 실종동물 번호
+//	public int getSeq() {
+//		return sqlSession.selectOne("Lostpet.getSeq");
+//	}
 	
 }
