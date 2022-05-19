@@ -5,9 +5,10 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import com.boardMVC.app.board.vo.FilesVO;
-import com.boardMVC.mybatis.config.MyBatisConfig;
+import com.saf.app.lostpet.vo.FilesVO;
+import com.saf.mybatis.config.MyBatisConfig;
 import com.oreilly.servlet.MultipartRequest;
 
 public class FilesDAO {
@@ -24,7 +25,7 @@ public class FilesDAO {
 	}
 	
 	//첨부파일 추가(로직)
-	public void insert(MultipartRequest multi, int boardNumber) {
+	public void insert(MultipartRequest multi, int lpnumber) {
 		FilesVO file = new FilesVO();
 		Enumeration<String> files = multi.getFileNames();
 		
@@ -43,21 +44,21 @@ public class FilesDAO {
 			if(fileName == null) {continue;}
 
 			file.setFileName(fileName);
-			file.setFileNameOriginal(fileNameOriginal);
-			file.setBoardNumber(boardNumber);
+			file.setFileOriginal(fileNameOriginal);
+			file.setLpNumber(lpnumber);
 			
 			insert(file);
 		}
 	}
 	
 	//첨부파일 삭제
-	public void delete(int boardNumber) {
-		sqlSession.delete("Files.delete", boardNumber);
+	public void delete(int lpnumber) {
+		sqlSession.delete("Files.delete", lpnumber);
 	}
 	
 	//첨부파일 가져오기
-	public List<FilesVO> select(int boardNumber){
-		return sqlSession.selectList("Files.select", boardNumber);
+	public List<FilesVO> select(int lpnumber){
+		return sqlSession.selectList("Files.select", lpnumber);
 	}
 	
 }

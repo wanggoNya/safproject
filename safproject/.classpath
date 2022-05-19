@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
+<<<<<<< HEAD
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+=======
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk-11.0.15.1">
+>>>>>>> lostpet/lostpet-db
 		<attributes>
 			<attribute name="module" value="true"/>
 			<attribute name="owner.project.facets" value="java"/>
@@ -14,8 +18,19 @@
 	</classpathentry>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+<<<<<<< HEAD
 	<classpathentry exported="true" kind="lib" path="C:/aigb_9000_sck/jsp/resource/mybatis-3.5.9/mybatis-3.5.9/mybatis-3.5.9.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/aigb_9000_sck/jsp/resource/mysql-connector-java-8.0.28.jar"/>
 	<classpathentry exported="true" kind="lib" path="D:/aigb_0900_kjy/jsp/resource/json-simple-1.1.jar/json-simple-1.1.jar"/>
+=======
+	<classpathentry exported="true" kind="lib" path="C:/Users/o_o63/OneDrive/GitHub/lib 모음/새 폴더/cos.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/o_o63/OneDrive/GitHub/lib 모음/새 폴더/json-simple-1.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/o_o63/OneDrive/GitHub/lib 모음/새 폴더/jstl.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/o_o63/OneDrive/GitHub/lib 모음/새 폴더/mybatis-3.5.9.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/o_o63/OneDrive/GitHub/lib 모음/새 폴더/mysql-connector-java-8.0.27.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/o_o63/OneDrive/GitHub/lib 모음/새 폴더/ojdbc6.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/o_o63/OneDrive/GitHub/lib 모음/새 폴더/standard.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/o_o63/OneDrive/GitHub/lib 모음/새 폴더/tomcat-dbcp.jar"/>
+>>>>>>> lostpet/lostpet-db
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

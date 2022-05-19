@@ -1,13 +1,16 @@
 package com.saf.app.lostpet.controller;
 
+
 import java.io.IOException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.boardMVC.action.Action;
-import com.boardMVC.action.ActionForward;
-import com.boardMVC.app.board.dao.BoardReplyDAO;
+import com.saf.app.action.Action;
+import com.saf.app.action.ActionForward;
+import com.saf.app.lostpet.dao.LostPetDAO;
+import com.saf.app.lostpet.dao.LostPetReplyDAO;
+import com.saf.app.lostpet.dao.FilesDAO; 
 
 public class LostPetReplyDeleteOk implements Action {
 

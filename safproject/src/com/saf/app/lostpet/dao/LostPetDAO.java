@@ -6,9 +6,9 @@ import java.util.Map;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
-import com.boardMVC.app.board.vo.BoardDTO;
-import com.boardMVC.app.board.vo.BoardVO;
-import com.boardMVC.mybatis.config.MyBatisConfig;
+import com.saf.app.lostpet.vo.LostPetDTO;
+import com.saf.app.lostpet.vo.LostPetVO;
+import com.saf.mybatis.config.MyBatisConfig;
 
 public class LostPetDAO {
 	SqlSessionFactory sqlSessionFactory = MyBatisConfig.getSqlsessoinFactory();
@@ -17,62 +17,50 @@ public class LostPetDAO {
 	public LostPetDAO() {
 		sqlSession = sqlSessionFactory.openSession(true);
 	}
+
+	//실종동물 목록
+	public List<LostPetDTO> selectAll(Map<String, Integer> lostpetMap) {
+		return sqlSession.selectList("Lostpet.selectAll", lostpetMap);
+	}
 	
-	//게시글 목록
-//	public List<BoardVO> selectAll(Map<String, Integer> boardMap) {
-//		return sqlSession.selectList("Board.selectAll", boardMap);
+	//실종동물 전체 수
+	public int getTotal() {
+		return sqlSession.selectOne("Lostpet.getTotal");
+	}
+	
+	//실종동물 찾은 수
+	public int getFindCount() {
+		return sqlSession.selectOne("Lostpet.getFindCount");
+	}
+	
+	//실종동물 정보 조회
+	public LostPetDTO selectDetail(int lpnumber) {
+		return sqlSession.selectOne("Lostpet.selectDetail", lpnumber);
+	}
+	
+	//실종동물 신고문자 작성
+	public void message(LostPetVO lostpet) {
+		sqlSession.insert("Lostpet.message", lostpet);
+	}
+	
+	//실종동물 추가
+	public void insert(LostPetVO lostpet) {
+		sqlSession.insert("Lostpet.insert", lostpet);
+	}
+	
+	//실종동물 삭제
+	public void delete(int lpnumber) {
+		sqlSession.delete("Lostpet.delete", lpnumber);
+	}
+	
+	//실종동물 수정
+	public void update(LostPetVO board) {
+		sqlSession.update("Lostpet.update", board);
+	}
+	
+//	//최근 실종동물 번호
+//	public int getSeq() {
+//		return sqlSession.selectOne("Lostpet.getSeq");
 //	}
 	
-	//게시글 목록
-	public List<LostPetDTO> selectAll(Map<String, Integer> boardMap) {
-		return sqlSession.selectList("Board.selectAll", boardMap);
-	}
-	
-	//게시글 전체 개수
-	public int getTotal() {
-		return sqlSession.selectOne("Board.getTotal");
-	}
-	
-	//게시글 정보 조회
-	public LostPetDTO selectDetail(int boardNumber) {
-		return sqlSession.selectOne("Board.selectDetail", boardNumber);
-	}
-	
-	//게시글 조회수 증가
-	public void updateReadCount(int boardNumber) {
-		sqlSession.update("Board.updateReadCount", boardNumber);
-	}
-	
-	//최근 게시글 번호
-	public int getSeq() {
-		return sqlSession.selectOne("Board.getSeq");
-	}
-	
-	//게시글 추가
-	public void insert(LostPetVO board) {
-		sqlSession.insert("Board.insert", board);
-	}
-	
-	//게시글 삭제
-	public void delete(int boardNumber) {
-		sqlSession.delete("Board.delete", boardNumber);
-	}
-	
-	//게시글 수정
-	public void update(LostPetVO board) {
-		sqlSession.update("Board.update", board);
-	}
-	
 }
-
-
-
-
-
-
-
-
-
-
-
-
