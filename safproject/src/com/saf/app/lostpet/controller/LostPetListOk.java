@@ -1,20 +1,14 @@
 package com.saf.app.lostpet.controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
-import java.util.stream.Collectors;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.boardMVC.action.Action;
-import com.boardMVC.action.ActionForward;
-import com.boardMVC.app.board.dao.BoardDAO;
-import com.boardMVC.app.board.vo.BoardDTO;
-import com.boardMVC.app.board.vo.BoardVO;
-import com.boardMVC.app.member.dao.MemberDAO;
+import com.saf.app.action.Action;
+import com.saf.app.action.ActionForward;
+import com.saf.app.lostpet.dao.LostPetDAO;
 
 public class LostPetListOk implements Action{
 
@@ -22,7 +16,7 @@ public class LostPetListOk implements Action{
 	public ActionForward execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		HashMap<String, Integer> boardMap = new HashMap<>();
 		ActionForward af = new ActionForward();
-		BoardDAO dao = new BoardDAO();
+		LostPetDAO dao = new LostPetDAO();
 //		BoardDAO bDao = new BoardDAO();
 //		MemberDAO mDao = new MemberDAO();
 

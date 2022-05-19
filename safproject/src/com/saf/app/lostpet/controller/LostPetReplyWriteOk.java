@@ -5,10 +5,9 @@ import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.boardMVC.action.Action;
-import com.boardMVC.action.ActionForward;
-import com.boardMVC.app.board.dao.BoardReplyDAO;
-import com.boardMVC.app.board.vo.BoardReplyVO;
+import com.saf.app.action.*;
+import com.saf.app.lostpet.dao.*; 
+import com.saf.app.lostpet.vo.*; 
 
 public class LostPetReplyWriteOk implements Action {
 
@@ -20,9 +19,9 @@ public class LostPetReplyWriteOk implements Action {
 		LostPetReplyVO reply = new LostPetReplyVO();
 		LostPetReplyDAO dao = new LostPetReplyDAO();
 		
-		reply.setRcontent(req.getParameter("replyContent"));
-		reply.setBnumber(Integer.parseInt(req.getParameter("boardNumber")));
-		reply.setUserNumber((Integer)req.getSession().getAttribute("userNumber"));
+		reply.setReplyContent(req.getParameter("replyContent"));
+		reply.setBoardNumber(Integer.parseInt(req.getParameter("lpnumber")));
+		reply.setUserNumber((Integer)req.getSession().getAttribute("unumber"));
 		
 		dao.insertReply(reply);
 		

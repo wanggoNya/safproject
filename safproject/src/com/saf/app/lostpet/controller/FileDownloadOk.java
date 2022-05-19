@@ -10,8 +10,8 @@ import java.io.OutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.boardMVC.action.Action;
-import com.boardMVC.action.ActionForward;
+import com.saf.app.action.Action;
+import com.saf.app.action.ActionForward;
 
 public class FileDownloadOk implements Action{
 	@Override
@@ -19,7 +19,7 @@ public class FileDownloadOk implements Action{
 		req.setCharacterEncoding("UTF-8");
 		resp.setCharacterEncoding("UTF-8");
 		
-		String uploadFolder = "D:\\aigb_0900_hds\\jsp\\workspace\\boardMVC\\WebContent\\upload";
+		String uploadFolder = "C:\\aigb_0900_ksy\\1team_image";
 		String fileName = req.getParameter("fileName");
 		String fileNameOriginal = req.getParameter("fileNameOriginal");
 		InputStream inputStream = null;
@@ -28,7 +28,7 @@ public class FileDownloadOk implements Action{
 		
 		try {
 			file = new File(uploadFolder, fileName);
-			fileNameOriginal = "[한동석짱]_" + fileNameOriginal;
+			fileNameOriginal = "[saf_lostpet]_" + fileNameOriginal;
 			
 			//기존 문자열을 뼈속까지 UTF-8로 변경
 			String fileNameToSend = new String(fileNameOriginal.getBytes("UTF-8"), "ISO-8859-1");
@@ -36,7 +36,7 @@ public class FileDownloadOk implements Action{
 			//응답 데이터의 형식을 byte로 설정
 			resp.setContentType("application/octet-stream");
 			//응답할 데이터의 설명(선택사항)
-			resp.setHeader("Content-Description", "동석이짱");
+			resp.setHeader("Content-Description", "실종동물페이지");
 			//브라우저에게 전달될 데이터의 타입을 설정
 			resp.setHeader("Content-Disposition", "attachment;filename=\"" + fileNameToSend +"\"");
 			//응답 데이터의 형식을 byte, charset을 UTF-8로 설정

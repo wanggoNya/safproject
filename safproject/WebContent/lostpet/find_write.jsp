@@ -15,7 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
-    
+                 <script src="${pageContext.request.contextPath}/lostpet/find_write.js"></script>
     
     <link rel="stylesheet" href="${pageContext.request.contextPath}/lostpet/find_write.css" />
 
@@ -33,7 +33,7 @@
       </section>
       <section class="container">
         <h3 class="wr-title-h3">글 쓰기</h3>
-        <form action="${pageContext.request.contextPath}/lostpet/controller/LostPetWriteOk.lo" name="writeForm" method="post" enctype="multipart/form-data">
+        <form  method="post"  action="${pageContext.request.contextPath}/lostpet/controller/LostPetWriteOk.lo" name="findWriteForm" enctype="multipart/form-data">
           <div class="form-group">
             <div class="find-q">
               <label class="wr-title" for="">말머리 선택</label>
@@ -182,11 +182,68 @@
             </div> 
 <div style="clear:both;"></div>
 
+
+
+                           <div class="find-q">
+                           
+                           <label class="wr-title" for="">실종 동물 사진</label>
+                           <div  style="display:flex;">
+                              <div class="files">
+                                 <div>
+                                     <label for="board_file1" style="display:inline;">
+                                       <img id="board_file1Img" src="${pageContext.request.contextPath}/lostpet/images/filePlus.png" width="110px" height="110px" style="display:inline;">
+                                    </label>
+                                 </div>
+                                 <input id="board_file1" name="lpimage1"  type="file"  accept='image/jpeg,image/gif,image/png' onchange="fileCheck(this);" >
+                                 <input class="btn-img" type="button" onclick="cancelFile('board_file1');" value="첨부 삭제">
+                              </div>
+                              <div class="files">
+                                 <div>
+                                    <label for="board_file2" style="display:inline;">
+                                       <img id="board_file2Img" src="${pageContext.request.contextPath}/lostpet/images/filePlus.png" width="110px" height="110px" style="display:inline;">
+                                    </label>
+                                 </div>
+                                <input id="board_file2" name="lpimage2"  type="file"  accept='image/jpeg,image/gif,image/png' onchange="fileCheck(this);" >
+                                 <input class="btn-img" type="button" onclick="cancelFile('board_file2')" value="첨부 삭제" >
+                              </div>
+                              <div class="files">
+                                 <div>
+                                    <label for="board_file3" style="display:inline;">
+                                       <img id="board_file3Img" src="${pageContext.request.contextPath}/lostpet/images/filePlus.png" width="110px" height="110px" style="display:inline;">
+                                    </label>
+                                 </div>
+                                 <input id="board_file3" name="lpimage3"  type="file"  accept='image/jpeg,image/gif,image/png' onchange="fileCheck(this);">
+                                 <input class="btn-img" type="button" onclick="cancelFile('board_file3')" value="첨부 삭제" >
+                              </div>
+                               <div class="files">
+                                 <div>
+                                    <label for="board_file4" style="display:inline;">
+                                       <img id="board_file4Img" src="${pageContext.request.contextPath}/lostpet/images/filePlus.png" width="110px" height="110px" style="display:inline;">
+                                    </label>
+                                 </div>
+                                 <input id="board_file4" name="lpimage4"  type="file"  accept='image/jpeg,image/gif,image/png' onchange="fileCheck(this);">
+                                 <input class="btn-img" type="button" onclick="cancelFile('board_file4')"value="첨부 삭제" >
+                              </div>
+                               <div class="files">
+                                 <div>
+                                    <label for="board_file5" style="display:inline;">
+                                       <img id="board_file5Img" src="${pageContext.request.contextPath}/lostpet/images/filePlus.png"  width="110px" height="110px" style="display:inline;">
+                                    </label>
+                                 </div>
+                                 <input id="board_file5" name="lpimage5"  type="file"  accept='image/jpeg,image/gif,image/png' onchange="fileCheck(this);">
+                                 <input class="btn-img" type="button" onclick="cancelFile('board_file5')" value="첨부 삭제">
+                              </div>
+                           </div>
+							</div>
+
+                           <div style="clear:both;"></div>
+
+
             <div class="find-q">
-              <label class="wr-title" for="">실종 동물 사진 및 상세정보</label>
+              <label class="wr-title" for="">실종 동물 상세정보</label>
+              <textarea name="lpcontent" class="width-place form-control inputarea" required style="width:60%; height:264px; resize: none;"></textarea>
               
-              <div id="summernote">사진 및 기타 상세정보를 입력하세요.</div>
-    <script src="${pageContext.request.contextPath}/lostpet/find_write.js"></script>
+             <!--  <div id="summernote">사진 및 기타 상세정보를 입력하세요.</div> -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
@@ -218,7 +275,8 @@
             </div>
           </div>
           <div class="button">
-            <button class="btn" type="submit">글 등록</button>
+            <input type="button" value="글 등록" class="btn" onclick="send()"/>
+             <script src="${pageContext.request.contextPath}/lostpet/find_write.js"></script>
           </div>
         </form>
       </section>
