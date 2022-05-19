@@ -6,26 +6,24 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.saf.app.action.*;
-import com.saf.app.lostpet.dao.*;
-import com.saf.app.lostpet.vo.*; 
-import com.saf.app.user.dao.*; 
-
+import com.boardMVC.action.Action;
+import com.boardMVC.action.ActionForward;
+import com.boardMVC.app.member.dao.MemberDAO;
 
 public class LostPetWrite implements Action{
 	@Override
 	public ActionForward execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		
 		HttpSession session = req.getSession();
-		UserDAO uDao = new UserDAO();
+		MemberDAO mDao = new MemberDAO();
 		ActionForward af = new ActionForward();
 		
-		String userId = uDao.getInfo((Integer)session.getAttribute("unum")).getUid();
+		String memberId = mDao.getInfo((Integer)session.getAttribute("memberNumber")).getMemberId();
 		
-		req.setAttribute("uid", userId);
+		req.setAttribute("memberId", memberId);
 		
 		af.setRedirect(false);
-		af.setPath("/app/lostpet/lostpetWrite.jsp");
+		af.setPath("/app/board/boardWrite.jsp");
 		
 		return af;
 	}

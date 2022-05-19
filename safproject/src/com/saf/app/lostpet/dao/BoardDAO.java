@@ -1,4 +1,4 @@
-package com.saf.app.board.dao;
+package com.saf.app.lostpet.dao;
 
 import java.util.List;
 import java.util.Map;
@@ -6,9 +6,9 @@ import java.util.Map;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
-import com.saf.app.board.vo.BoardDTO;
-import com.saf.app.board.vo.BoardVO;
-import com.saf.mybatis.config.MyBatisConfig;
+import com.boardMVC.app.board.vo.BoardDTO;
+import com.boardMVC.app.board.vo.BoardVO;
+import com.boardMVC.mybatis.config.MyBatisConfig;
 
 public class BoardDAO {
 	SqlSessionFactory sqlSessionFactory = MyBatisConfig.getSqlsessoinFactory();
@@ -24,7 +24,7 @@ public class BoardDAO {
 //	}
 	
 	//게시글 목록
-	public List<BoardDTO> selectAll(Map<String, Integer> boardMap) {
+	public List<LostPetDTO> selectAll(Map<String, Integer> boardMap) {
 		return sqlSession.selectList("Board.selectAll", boardMap);
 	}
 	
@@ -34,7 +34,7 @@ public class BoardDAO {
 	}
 	
 	//게시글 정보 조회
-	public BoardDTO selectDetail(int boardNumber) {
+	public LostPetDTO selectDetail(int boardNumber) {
 		return sqlSession.selectOne("Board.selectDetail", boardNumber);
 	}
 	

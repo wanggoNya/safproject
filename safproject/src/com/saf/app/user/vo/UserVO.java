@@ -1,15 +1,121 @@
 package com.saf.app.user.vo;
 
 public class UserVO {
+<<<<<<< HEAD
+	private int userNumber;
+	private String userId;
+	private String userPw;
+	private String userName;
+	private int userAge;
+	private String userGender;
+	private String userEmail;
+	private String userZipcode;
+	private String userAddress;
+	private String userAddressDetail;
+	
+	public UserVO() {;}
 
+	public int getUserNumber() {
+		return userNumber;
+	}
+
+	public void setUserNumber(int userNumber) {
+		this.userNumber = userNumber;
+	}
+
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+
+	public String getUserPw() {
+		return userPw;
+	}
+
+	public void setUserPw(String userPw) {
+		this.userPw = userPw;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public int getUserAge() {
+		return userAge;
+	}
+
+	public void setUserAge(int userAge) {
+		this.userAge = userAge;
+	}
+
+	public String getUserGender() {
+		return userGender;
+	}
+
+	public void setUserGender(String userGender) {
+		this.userGender = userGender;
+	}
+
+	public String getUserEmail() {
+		return userEmail;
+	}
+
+	public void setUserEmail(String userEmail) {
+		this.userEmail = userEmail;
+	}
+
+	public String getUserZipcode() {
+		return userZipcode;
+	}
+
+	public void setUserZipcode(String userZipcode) {
+		this.userZipcode = userZipcode;
+	}
+
+	public String getUserAddress() {
+		return userAddress;
+	}
+
+	public void setUserAddress(String userAddress) {
+		this.userAddress = userAddress;
+	}
+
+	public String getUserAddressDetail() {
+		return userAddressDetail;
+	}
+
+	public void setUserAddressDetail(String userAddressDetail) {
+		this.userAddressDetail = userAddressDetail;
+	}
+	
+	@Override
+	public String toString() {
+		String str = "userNumber : " + userNumber + "\n";
+		str += "userId : " + userId + "\n";
+		str += "userPw : " + userPw + "\n";
+		str += "userName : " + userName + "\n";
+		str += "userAge : " + userAge + "\n";
+		str += "userGender : " + userGender + "\n";
+		str += "userEmail : " + userEmail + "\n";
+		str += "userZipcode : " + userZipcode + "\n";
+		str += "userAddress : " + userAddress + "\n";
+		str += "userAddressDetail : " + userAddressDetail;
+		return str;
+	}
+=======
 	private int unum;
 	private String uid;
-	private String upw;
 	private String uphone;
-	private String uimage;
+	private String upw;
 	private String uname;
-	private String uaddr1;
-	private String uaddr2;
+	private String uaddr;
 	private String uemail;
 	
 	public int getUnum() {
@@ -24,23 +130,17 @@ public class UserVO {
 	public void setUid(String uid) {
 		this.uid = uid;
 	}
-	public String getUpw() {
-		return upw;
-	}
-	public void setUpw(String upw) {
-		this.upw = upw;
-	}
 	public String getUphone() {
 		return uphone;
 	}
 	public void setUphone(String uphone) {
 		this.uphone = uphone;
 	}
-	public String getUimage() {
+	public String getUpw() {
 		return upw;
 	}
-	public void setUimage(String uimage) {
-		this.uimage = uimage;
+	public void setUpw(String upw) {
+		this.upw = upw;
 	}
 	public String getUname() {
 		return uname;
@@ -48,17 +148,11 @@ public class UserVO {
 	public void setUname(String uname) {
 		this.uname = uname;
 	}
-	public String getUaddr1() {
-		return uaddr1;
+	public String getUaddr() {
+		return uaddr;
 	}
-	public void setUaddr1(String uaddr1) {
-		this.uaddr1 = uaddr1;
-	}
-	public String getUaddr2() {
-		return uaddr2;
-	}
-	public void setUaddr2(String uaddr2) {
-		this.uaddr2 = uaddr2;
+	public void setUaddr(String uaddr) {
+		this.uaddr = uaddr;
 	}
 	public String getUemail() {
 		return uemail;
@@ -71,19 +165,21 @@ public class UserVO {
 		
 	}
 	
-	public UserVO(int unum, String uid, String upw, String uimage, String uphone, String uname, String uaddr1, String uaddr2, String uemail) {
+	public UserVO(int unum, String uid, String uphone, String upw, String uname, String uaddr, String uemail) {
 		super();
 		this.unum = unum;
 		this.uid = uid;
-		this.upw = upw;
-		this.uimage = uimage;
 		this.uphone = uphone;
+		this.upw = upw;
 		this.uname = uname;
-		this.uaddr1 = uaddr1;
-		this.uaddr2 = uaddr2;
+		this.uaddr = uaddr;
 		this.uemail = uemail;
 	}
+	
+>>>>>>> fc915e31173cf357fb98650ae1701470401923a5
 }
+
+
 
 
 

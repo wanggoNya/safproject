@@ -7,27 +7,26 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.saf.app.action.Action;
-import com.saf.app.action.ActionForward;
-import com.saf.app.lostpet.dao.LostPetDAO;
-import com.saf.app.lostpet.dao.LostPetReplyDAO;
-import com.saf.app.lostpet.dao.FilesDAO;
-import com.saf.app.lostpet.vo.FilesVO;
+import com.boardMVC.action.Action;
+import com.boardMVC.action.ActionForward;
+import com.boardMVC.app.board.dao.BoardDAO;
+import com.boardMVC.app.board.dao.FilesDAO;
+import com.boardMVC.app.board.vo.FilesVO;
 
 public class LostPetDeleteOk implements Action{
 	@Override
 	public ActionForward execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		
-		String uploadFolder = "C:\\aigb_0900_ksy\\1team_image";
-		int lpnumber = Integer.parseInt(req.getParameter("lpnumber"));
-		LostPetDAO lpDao = new LostPetDAO();
+		String uploadFolder = "D:\\aigb_0900_hds\\jsp\\workspace\\boardMVC\\WebContent\\upload";
+		int boardNumber = Integer.parseInt(req.getParameter("boardNumber"));
+		BoardDAO bDao = new BoardDAO();
 		FilesDAO fDao = new FilesDAO();
 		ActionForward af = new ActionForward();
 		
-		List<FilesVO> files = fDao.select(lpnumber);
+		List<FilesVO> files = fDao.select(boardNumber);
 		
-		fDao.delete(lpnumber);
-		lpDao.delete(lpnumber);
+		fDao.delete(boardNumber);
+		bDao.delete(boardNumber);
 		
 		for (int i = 0; i < files.size(); i++) {
 			File f = new File(uploadFolder, files.get(i).getFileName());

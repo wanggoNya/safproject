@@ -5,9 +5,9 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
-import com.boardMVC.app.board.vo.BoardReplyDTO;
-import com.boardMVC.app.board.vo.BoardReplyVO;
-import com.boardMVC.mybatis.config.MyBatisConfig;
+import com.saf.app.board.vo.BoardReplyDTO;
+import com.saf.app.board.vo.BoardReplyVO;
+import com.saf.mybatis.config.MyBatisConfig;
 
 public class BoardReplyDAO {
 	SqlSessionFactory sqlSessionFactory = MyBatisConfig.getSqlsessoinFactory();
@@ -18,12 +18,12 @@ public class BoardReplyDAO {
 	}
 	
 	//댓글 목록
-	public List<LostPetReplyDTO> selectReplies(int boardNumber) {
+	public List<BoardReplyDTO> selectReplies(int boardNumber) {//boardNumber 이게 맞나? 밑에도 다
 		return sqlSession.selectList("Board.selectReplies", boardNumber);
 	}
 	
 	//댓글 등록
-	public void insertReply(LostPetReplyVO reply) {
+	public void insertReply(BoardReplyVO reply) {
 		sqlSession.insert("Board.insertReply", reply);
 	}
 	
@@ -33,7 +33,7 @@ public class BoardReplyDAO {
 	}
 	
 	//댓글 수정
-	public void updateReply(LostPetReplyVO reply) {
+	public void updateReply(BoardReplyVO reply) {
 		sqlSession.update("Board.updateReply", reply);
 	}
 }
