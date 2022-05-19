@@ -39,8 +39,8 @@
 	
 	<!-- 실종동물 작성 -->
 	<insert id="insert" parameterType="lostpetVO">
-		insert into lostpet (select lparea1, lparea2, lparea3, lpspecies, lpgender, lpcolor, lpbreed, lpimage, lpstatus, lptime, lpcontent) 
-		values(#{lparea1},#{lparea2},#{lparea3}, #{lpspecies}, #{lpgender}, #{lpcolor}, #{lpbreed}, #{lpimage}, #{lpstatus}, #{lptime}, #{lpcontent} )
+		insert into lostpet (select lparea1, lparea2, lparea3, lpspecies, lpgender, lpcolor, lpbreed, lpimage, lpstatus, lptime, lpcontent, unum) 
+		values(#{lparea1},#{lparea2},#{lparea3}, #{lpspecies}, #{lpgender}, #{lpcolor}, #{lpbreed}, #{lpimage}, #{lpstatus}, #{lptime}, #{lpcontent})
 	</insert>
 
 	<!-- 실종동물 삭제 -->
