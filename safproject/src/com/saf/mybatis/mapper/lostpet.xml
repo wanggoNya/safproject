@@ -12,12 +12,12 @@
 	
 	<!-- 실종동물 전체 수 -->
 	<select id="getTotal" parameterType="map" resultType="lostpetDTO">
-		
+		select count(lpnumber) from lostpet
 	</select>
 	
 	<!-- 실종동물 찾은 수 -->
 	<select id="getFindCount" parameterType="map" resultType="lostpetDTO">
-
+		
 	</select>
 	
 	<!-- 실종동물 상세보기(전체 정보 조회) -->
@@ -29,8 +29,20 @@
 		
 	<!-- 실종동물 신고문자 작성 -->
 	<select id="message" resultType="lostpetDTO">
-	
+		select uphone
+		from user u join lostpet lp
+		on lp.unum = u.num and lpnumber = #{lpnumber}
  	</select>
+ 	
+ 	<!-- 게시글작성자 unum 검색 후 uphone -->
+ 	<!-- 문자 작성자 unum 검색 후 uphone -->
+	
+	
+		<!-- 최근 실종동물 번호 -->
+	<select id="getSeq" resultType="_int">
+		select lpnumber from lostpet
+		order by 1 desc limit 0, 1;
+	</select>
 	
 	
 	<!-- 실종동물 작성 -->
@@ -50,6 +62,31 @@
 		set lparea1=#{lparea1}, lparea2=#{lparea2}, lparea3=#{lparea3}, lpspecies=#{lpspecies}, lpgender=#{lpgender}, lpcolor=#{lpcolor}, lpbreed=#{lpbreed}, lpimage=#{lpimage}, lpstatus=#{lpstatus}, lptime=#{lptime}, lpcontent=#{lpcontent}
 		where lpnumber = #{lpnumber}
 	</update>
+	
+	
+	
+		<!-- 첨부파일 추가 -->
+	<insert id="insert" parameterType="fileVO">
+		insert into file (fname, lpnumber, foriginal) 
+		values(#{fname}, #{bnumber}, #{foriginal})
+	</insert>
+	
+	<!-- 첨부파일 삭제 -->
+	<delete id="delete" parameterType="_int">
+		delete from file where lpnumber = #{lpnumber}
+	</delete>
+	
+	<!-- 첨부파일 가져오기 -->
+	<select id="select" parameterType="_int" resultType="fileVO">
+		select fname, lpnumber, foriginal from file 
+		where lpnumber = #{lpnumber}
+	</select>
+</mapper>
+	
+	
+	
+	
+	
 	
 	<!-- 댓글 등록 -->
 	<insert id="insertReply" parameterType="lostpetReplyVO">
