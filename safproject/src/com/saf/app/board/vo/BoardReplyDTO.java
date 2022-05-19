@@ -1,30 +1,31 @@
 package com.saf.app.board.vo;
 
 public class BoardReplyDTO {
-	private int replyNumber;
-	private int boardNumber;
-	private int userNumber;
-	private String userId;
-	private String replyContent;
+	private int rnumber;
+	private int bnumber;
+	//private int userNumber;
+	//private String userId;
+	private String rdate;
+	private String rcontent;
 	
 	public BoardReplyDTO() {;}
 
-	public int getReplyNumber() {
-		return replyNumber;
+	public int getRnumber() {
+		return rnumber;
 	}
 
-	public void setReplyNumber(int replyNumber) {
-		this.replyNumber = replyNumber;
+	public void setRnumber(int rnumber) {
+		this.rnumber = rnumber;
 	}
 
-	public int getBoardNumber() {
-		return boardNumber;
+	public int getBnumber() {
+		return bnumber;
 	}
 
-	public void setBoardNumber(int boardNumber) {
-		this.boardNumber = boardNumber;
+	public void setBnumber(int bnumber) {
+		this.bnumber = bnumber;
 	}
-
+/*
 	public int getUserNumber() {
 		return userNumber;
 	}
@@ -40,12 +41,12 @@ public class BoardReplyDTO {
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}
-
-	public String getReplyContent() {
-		return replyContent;
+*/
+	public String getRcontent() {
+		return rcontent;
 	}
 
-	public void setReplyContent(String replyContent) {
-		this.replyContent = replyContent;
+	public void setRcontent(String rcontent) {
+		this.rcontent = rcontent;
 	}
 }

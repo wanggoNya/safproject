@@ -10,11 +10,11 @@ import com.boardMVC.app.board.vo.BoardDTO;
 import com.boardMVC.app.board.vo.BoardVO;
 import com.boardMVC.mybatis.config.MyBatisConfig;
 
-public class LostPetDAO {
+public class BoardDAO {
 	SqlSessionFactory sqlSessionFactory = MyBatisConfig.getSqlsessoinFactory();
 	SqlSession sqlSession;
 	
-	public LostPetDAO() {
+	public BoardDAO() {
 		sqlSession = sqlSessionFactory.openSession(true);
 	}
 	
@@ -49,7 +49,7 @@ public class LostPetDAO {
 	}
 	
 	//게시글 추가
-	public void insert(LostPetVO board) {
+	public void insert(BoardVO board) {
 		sqlSession.insert("Board.insert", board);
 	}
 	
@@ -59,7 +59,7 @@ public class LostPetDAO {
 	}
 	
 	//게시글 수정
-	public void update(LostPetVO board) {
+	public void update(BoardVO board) {
 		sqlSession.update("Board.update", board);
 	}
 	

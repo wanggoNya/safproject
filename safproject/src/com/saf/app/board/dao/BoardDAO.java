@@ -6,9 +6,9 @@ import java.util.Map;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
-import com.boardMVC.app.board.vo.BoardDTO;
-import com.boardMVC.app.board.vo.BoardVO;
-import com.boardMVC.mybatis.config.MyBatisConfig;
+import com.saf.app.board.vo.BoardDTO;
+import com.saf.app.board.vo.BoardVO;
+import com.saf.mybatis.config.MyBatisConfig;
 
 public class BoardDAO {
 	SqlSessionFactory sqlSessionFactory = MyBatisConfig.getSqlsessoinFactory();
@@ -24,7 +24,7 @@ public class BoardDAO {
 //	}
 	
 	//게시글 목록
-	public List<LostPetDTO> selectAll(Map<String, Integer> boardMap) {
+	public List<BoardDTO> selectAll(Map<String, Integer> boardMap) {
 		return sqlSession.selectList("Board.selectAll", boardMap);
 	}
 	
@@ -34,7 +34,7 @@ public class BoardDAO {
 	}
 	
 	//게시글 정보 조회
-	public LostPetDTO selectDetail(int boardNumber) {
+	public BoardDTO selectDetail(int boardNumber) {
 		return sqlSession.selectOne("Board.selectDetail", boardNumber);
 	}
 	
@@ -49,7 +49,7 @@ public class BoardDAO {
 	}
 	
 	//게시글 추가
-	public void insert(LostPetVO board) {
+	public void insert(BoardVO board) {
 		sqlSession.insert("Board.insert", board);
 	}
 	
@@ -59,7 +59,7 @@ public class BoardDAO {
 	}
 	
 	//게시글 수정
-	public void update(LostPetVO board) {
+	public void update(BoardVO board) {
 		sqlSession.update("Board.update", board);
 	}
 	

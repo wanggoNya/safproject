@@ -18,7 +18,7 @@ public class BoardDetailOk implements Action {
 		int boardNumber = Integer.parseInt(req.getParameter("boardNumber"));
 		int page = Integer.parseInt(req.getParameter("page"));
 		
-		LostPetDAO bDao = new LostPetDAO();
+		BoardDAO bDao = new BoardDAO();
 		FilesDAO fDao = new FilesDAO();
 		ActionForward af = new ActionForward();
 		

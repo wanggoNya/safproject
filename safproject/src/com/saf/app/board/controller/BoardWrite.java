@@ -6,9 +6,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.boardMVC.action.Action;
-import com.boardMVC.action.ActionForward;
-import com.boardMVC.app.member.dao.MemberDAO;
+import com.saf.action.Action;
+import com.saf.action.ActionForward;
+import com.saf.app.user.dao.UserDAO;
 
 public class BoardWrite implements Action{
 	@Override

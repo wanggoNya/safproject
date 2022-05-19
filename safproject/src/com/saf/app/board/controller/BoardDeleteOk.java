@@ -7,7 +7,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.boardMVC.action.Action;
+import com.saf.action.Action;
 import com.boardMVC.action.ActionForward;
 import com.boardMVC.app.board.dao.BoardDAO;
 import com.boardMVC.app.board.dao.FilesDAO;
@@ -19,7 +19,7 @@ public class BoardDeleteOk implements Action{
 		
 		String uploadFolder = "D:\\aigb_0900_hds\\jsp\\workspace\\boardMVC\\WebContent\\upload";//변경할것
 		int boardNumber = Integer.parseInt(req.getParameter("boardNumber"));
-		LostPetDAO bDao = new LostPetDAO();
+		BoardDAO bDao = new BoardDAO();
 		FilesDAO fDao = new FilesDAO();
 		ActionForward af = new ActionForward();
 		

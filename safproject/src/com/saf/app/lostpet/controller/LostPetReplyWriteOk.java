@@ -20,8 +20,8 @@ public class LostPetReplyWriteOk implements Action {
 		LostPetReplyVO reply = new LostPetReplyVO();
 		LostPetReplyDAO dao = new LostPetReplyDAO();
 		
-		reply.setReplyContent(req.getParameter("replyContent"));
-		reply.setBoardNumber(Integer.parseInt(req.getParameter("boardNumber")));
+		reply.setRcontent(req.getParameter("replyContent"));
+		reply.setBnumber(Integer.parseInt(req.getParameter("boardNumber")));
 		reply.setUserNumber((Integer)req.getSession().getAttribute("userNumber"));
 		
 		dao.insertReply(reply);

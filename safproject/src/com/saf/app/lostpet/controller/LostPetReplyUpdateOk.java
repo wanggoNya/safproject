@@ -20,8 +20,8 @@ public class LostPetReplyUpdateOk implements Action {
 		LostPetReplyVO reply = new LostPetReplyVO();
 		LostPetReplyDAO dao = new LostPetReplyDAO();
 		
-		reply.setReplyNumber(Integer.parseInt(req.getParameter("replyNumber")));
-		reply.setReplyContent(req.getParameter("replyContent"));
+		reply.setRnumber(Integer.parseInt(req.getParameter("replyNumber")));
+		reply.setRcontent(req.getParameter("replyContent"));
 		
 		dao.updateReply(reply);
 		
