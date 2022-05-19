@@ -95,85 +95,12 @@ function loadFile(input) {
 
 
 
-
-  
-  
-  // 유효성 검사
-function send(){	
-console.log("check");
-	if(findWriteForm.lpstatus.value == 'none'){
-		alert("말머리를 선택해주세요.");
-		return;
-	}
-	
-	if(!findWriteForm.lparea1.value){
-		alert("실종지역(시군구)을 선택해주세요.");
-		return;
-	}
-	
-	if(!findWriteForm.lparea2.value){
-		alert("실종지역(읍면동)을 작성해주세요.");
-		return;
-	}
-	
-	if(!findWriteForm.lparea3.value){
-		alert("실종지역(상세 위치)을 작성해주세요.");
-		return;
-	}
-	
-	if(!findWriteForm.lptime1.value){
-		alert("실종(발견) 날짜를 확인해주세요.");
-		return;
-	}
-	
-	if(!findWriteForm.lptime2.value){
-		alert("실종(발견) 시간을 확인해주세요.");
-		return;
-	}
-	
-	if(!findWriteForm.lpbreed.value){
-		alert("실종 동물 종을 확인해주세요.");
-		return;
-	}
-	
-	if(findWriteForm.lpgender.value == 'none'){
-		alert("실종 동물 성별을 확인해주세요.");
-		return;
-	}
-	
-		if(!findWriteForm.lpcontent.value){
-		alert("실종 동물 상세정보를 확인해주세요.");
-		return;
-	}
-	
-	findWriteForm.submit();
-}
-  
-  
-  function fileCheck(obj) {
+function fileCheck(obj) {
     pathpoint = obj.value.lastIndexOf('.');
     filepoint = obj.value.substring(pathpoint+1, obj.length);
     filetype=filepoint.toLowerCase();
     if(filetype=='jpg' || filetype=='gif'||filetype=='png'||filetype=='jpeg'||filetype=='bmp') {
       // 정상적인 이미지 확장자의 경우
-      $(".files").change(function(e){
-         		var file = e.target.files[0];
-         		var img = $(this).find("img");
-         		var reader = new FileReader();
-         		reader.readAsDataURL(file);
-         		
-    	   		reader.onload = function(e){
-    	   			if(e.target.result.indexOf("image") != -1){
-    		   			img.attr("src", e.target.result)
-    	   			}else{
-    	   				img.attr("src", "${pageContext.request.contextPath}/images/no_img.jpg");
-    	   			}
-    	   		}
-    	   	});
-         	
-         	
-         	
-         	
     } else {
       alert('이미지 파일만 선택할 수 있습니다.');
       parentObj = obj.parentNode
@@ -185,9 +112,3 @@ console.log("check");
       if(!upload) return false;
     }
   }
-  
-         	
-         	function cancelFile(fileName){
-         		$("input#" + fileName).val("");
-         		$("img#" + fileName + "Img").attr("src", "images/filePlus.png");
-         	}
