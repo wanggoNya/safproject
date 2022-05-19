@@ -415,7 +415,7 @@
                                             <div class="join_item">
                                                 <div class="join_email_box">
                                                     <div class="join_email_box1">
-                                                        <input name="uemail1" type="text" maxlength="30"
+                                                        <input name="uemail" type="text" maxlength="30"
                                                             id="join_uemail_1" class="join_form_control wid300"
                                                             autocapitalize="off"
                                                             style="ime-mode:inactive" />
