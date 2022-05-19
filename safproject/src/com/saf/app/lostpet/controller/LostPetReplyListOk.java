@@ -1,7 +1,6 @@
 package com.saf.app.lostpet.controller;
 
 import java.io.IOException;
-
 import java.io.PrintWriter;
 import java.util.List;
 
@@ -11,10 +10,10 @@ import javax.servlet.http.HttpServletResponse;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-import com.saf.app.action.*;
-import com.saf.app.lostpet.dao.*;
-import com.saf.app.lostpet.vo.*; 
-
+import com.boardMVC.action.Action;
+import com.boardMVC.action.ActionForward;
+import com.boardMVC.app.board.dao.BoardReplyDAO;
+import com.boardMVC.app.board.vo.BoardReplyDTO;
 
 public class LostPetReplyListOk implements Action {
 
@@ -33,11 +32,11 @@ public class LostPetReplyListOk implements Action {
 
 		for(LostPetReplyDTO r : replyList) {
 			JSONObject reply = new JSONObject();
-			reply.put("replyNumber", r.getReplyNumber());
-			reply.put("boardNumber", r.getLostpetNumber());
-			reply.put("memberNumber", r.getUserNumber());
-			reply.put("memberId", r.getUserId());
-			reply.put("replyContent", r.getReplyContent());
+			reply.put("replyNumber", r.getRnumber());
+			reply.put("boardNumber", r.getBnumber());
+			reply.put("memberNumber", r.getMemberNumber());
+			reply.put("memberId", r.getMemberId());
+			reply.put("replyContent", r.getRcontent());
 			replies.add(reply);
 		}
 		

@@ -72,7 +72,7 @@ p{
     box-sizing: border-box;
 }
 
-.foot-row{
+.row{
     display: flex;
     flex-wrap: wrap;
     margin-left: -15px;

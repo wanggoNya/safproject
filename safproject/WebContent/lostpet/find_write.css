@@ -134,7 +134,7 @@ label {
 }
 
 .width-place {
-  width: 41.8%;
+  width: 44.8%;
 }
 select.form-control {
   width: 25% !important;
@@ -162,7 +162,7 @@ input:not([type="checkbox"]):not([type="radio"]).error, textarea.error, select.e
 }
 
 .addr, .time{
-  margin-right: 1%;
+  margin-right: 5%;
   
 }
 

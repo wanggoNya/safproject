@@ -5,10 +5,10 @@ import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.saf.app.action.*;
-import com.saf.app.lostpet.dao.*;
-import com.saf.app.lostpet.vo.*; 
-
+import com.boardMVC.action.Action;
+import com.boardMVC.action.ActionForward;
+import com.boardMVC.app.board.dao.BoardReplyDAO;
+import com.boardMVC.app.board.vo.BoardReplyVO;
 
 public class LostPetReplyUpdateOk implements Action {
 
@@ -20,8 +20,8 @@ public class LostPetReplyUpdateOk implements Action {
 		LostPetReplyVO reply = new LostPetReplyVO();
 		LostPetReplyDAO dao = new LostPetReplyDAO();
 		
-		reply.setReplyNumber(Integer.parseInt(req.getParameter("replyNumber")));
-		reply.setReplyContent(req.getParameter("replyContent"));
+		reply.setRnumber(Integer.parseInt(req.getParameter("replyNumber")));
+		reply.setRcontent(req.getParameter("replyContent"));
 		
 		dao.updateReply(reply);
 		

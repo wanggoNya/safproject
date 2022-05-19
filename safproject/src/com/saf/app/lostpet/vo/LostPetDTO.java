@@ -3,140 +3,79 @@ package com.saf.app.lostpet.vo;
 // 나는 기존 테이블의 컬럼의 변형 또는 이외의 연산이 있을 경우에는
 // 클래스이름 뒤에 DTO를 붙이겠다.
 public class LostPetDTO {
-	private int lpnumber;
-	private String lparea1;
-	private String lparea2;
-	private String lparea3;
-	private String lpspecies;
-	private String lpgender;
-	private String lpcolor;
-	private String lpbreed;
-	private String lpimage;
-	private int lpstatus;
-	private String lptime;
-	private String lpcontent;
-	private int unum;
+	private int boardNumber;
+	private String boardTitle;
+	private String boardContent;
+	private int userNumber;
+	private String userId;
+	private String boardDate;
+	private int readCount;
 	
 	public LostPetDTO() {;}
 
-	public LostPetDTO(LostPetVO lostpetVO) {
+	public LostPetDTO(BoardVO boardVO) {
 		super();
-		this.unum = lostpetVO.getUnum();
-		this.lpnumber = lostpetVO.getLpnumber();
-		this.lparea1 = lostpetVO.getLparea1();
-		this.lparea2 = lostpetVO.getLparea2();
-		this.lparea3 = lostpetVO.getLparea3();
-		this.lpspecies = lostpetVO.getLpspecies();
-		this.lpgender = lostpetVO.getLpgender();
-		this.lpcolor = lostpetVO.getLpcolor();
-		this.lpbreed = lostpetVO.getLpbreed();
-		this.lpimage = lostpetVO.getLpimage();
-		this.lpstatus = lostpetVO.getLpstatus();
-		this.lptime = lostpetVO.getLptime();
-		this.lpcontent = lostpetVO.getLpcontent();
+		this.userNumber = boardVO.getUserNumber();
+		this.boardNumber = boardVO.getBnumber();
+		this.boardTitle = boardVO.getBoardTitle();
+		this.boardContent = boardVO.getBoardContent();
+		this.boardDate = boardVO.getBoardDate();
+		this.readCount = boardVO.getReadCount();
 	}
 
-	public int getLpnumber() {
-		return lpnumber;
+	public int getBoardNumber() {
+		return boardNumber;
 	}
 
-	public void setLpnumber(int lpnumber) {
-		this.lpnumber = lpnumber;
+	public void setBoardNumber(int boardNumber) {
+		this.boardNumber = boardNumber;
 	}
 
-	public String getLparea1() {
-		return lparea1;
+	public String getBoardTitle() {
+		return boardTitle;
 	}
 
-	public void setLparea1(String lparea1) {
-		this.lparea1 = lparea1;
+	public void setBoardTitle(String boardTitle) {
+		this.boardTitle = boardTitle;
 	}
 
-	public String getLparea2() {
-		return lparea2;
+	public String getBoardContent() {
+		return boardContent;
 	}
 
-	public void setLparea2(String lparea2) {
-		this.lparea2 = lparea2;
+	public void setBoardContent(String boardContent) {
+		this.boardContent = boardContent;
 	}
 
-	public String getLparea3() {
-		return lparea3;
+	public int getUserNumber() {
+		return userNumber;
 	}
 
-	public void setLparea3(String lparea3) {
-		this.lparea3 = lparea3;
+	public void setUserNumber(int userNumber) {
+		this.userNumber = userNumber;
 	}
 
-	public String getLpspecies() {
-		return lpspecies;
+	public String getUserId() {
+		return userId;
 	}
 
-	public void setLpspecies(String lpspecies) {
-		this.lpspecies = lpspecies;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 
-	public String getLpgender() {
-		return lpgender;
+	public String getBoardDate() {
+		return boardDate;
 	}
 
-	public void setLpgender(String lpgender) {
-		this.lpgender = lpgender;
+	public void setBoardDate(String boardDate) {
+		this.boardDate = boardDate;
 	}
 
-	public String getLpcolor() {
-		return lpcolor;
+	public int getReadCount() {
+		return readCount;
 	}
 
-	public void setLpcolor(String lpcolor) {
-		this.lpcolor = lpcolor;
-	}
-
-	public String getLpbreed() {
-		return lpbreed;
-	}
-
-	public void setLpbreed(String lpbreed) {
-		this.lpbreed = lpbreed;
-	}
-
-	public String getLpimage() {
-		return lpimage;
-	}
-
-	public void setLpimage(String lpimage) {
-		this.lpimage = lpimage;
-	}
-
-	public int getLpstatus() {
-		return lpstatus;
-	}
-
-	public void setLpstatus(int lpstatus) {
-		this.lpstatus = lpstatus;
-	}
-
-	public String getLptime() {
-		return lptime;
-	}
-
-	public void setLptime(String lptime) {
-		this.lptime = lptime;
-	}
-
-	public String getLpcontent() {
-		return lpcontent;
-	}
-
-	public void setLpcontent(String lpcontent) {
-		this.lpcontent = lpcontent;
-	}
-
-	public int getUnum() {
-		return unum;
-	}
-
-	public void setUnum(int unum) {
-		this.unum = unum;
+	public void setReadCount(int readCount) {
+		this.readCount = readCount;
 	}
 }

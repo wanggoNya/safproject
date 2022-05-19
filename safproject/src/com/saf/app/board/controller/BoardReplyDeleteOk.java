@@ -5,17 +5,17 @@ import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.boardMVC.action.Action;
-import com.boardMVC.action.ActionForward;
-import com.boardMVC.app.board.dao.BoardReplyDAO;
+import com.saf.action.Action;
+import com.saf.action.ActionForward;
+import com.saf.app.board.dao.BoardReplyDAO;
 
 public class BoardReplyDeleteOk implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		LostPetReplyDAO dao = new LostPetReplyDAO();
+		BoardReplyDAO dao = new BoardReplyDAO();
 		
-		dao.deleteReply(Integer.parseInt(req.getParameter("replyNumber")));
+		dao.deleteReply(Integer.parseInt(req.getParameter("rnumber")));
 		
 		return null;
 	}

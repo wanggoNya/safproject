@@ -5,30 +5,30 @@ public class FilesVO {
 	private String foriginal;
 	private int lpnumber;
 	
-	public String getFileName() {
+	public String getFname() {
 		return fname;
 	}
-	public void setFileName(String fileName) {
-		this.fname = fileName;
+	public void setFname(String fname) {
+		this.fname = fname;
 	}
-	public String getFileOriginal() {
+	public String getForiginal() {
 		return foriginal;
 	}
-	public void setFileOriginal(String fileOriginal) {
-		this.foriginal = fileOriginal;
+	public void setForiginal(String foriginal) {
+		this.foriginal = foriginal;
 	}
-	public int getLpNumber() {
+	public int getLpnumber() {
 		return lpnumber;
 	}
-	public void setLpNumber(int lostpetNumber) {
-		this.lpnumber = lostpetNumber;
+	public void setLpnumber(int lpnumber) {
+		this.lpnumber = lpnumber;
 	}
 	
-	public FilesVO(String fileName, String fileOriginal, int lostpetNnumber) {
+	public FilesVO(String fname, String foriginal, int bnumber, int lpnumber) {
 		super();
-		this.fname = fileName;
-		this.foriginal = fileOriginal;
-		this.lpnumber = lostpetNnumber;
+		this.fname = fname;
+		this.foriginal = foriginal;
+		this.lpnumber = lpnumber;
 	}
 	
 	public FilesVO() {

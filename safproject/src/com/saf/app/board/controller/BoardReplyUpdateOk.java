@@ -5,10 +5,10 @@ import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.boardMVC.action.Action;
-import com.boardMVC.action.ActionForward;
-import com.boardMVC.app.board.dao.BoardReplyDAO;
-import com.boardMVC.app.board.vo.BoardReplyVO;
+import com.saf.action.Action;
+import com.saf.action.ActionForward;
+import com.saf.app.board.dao.BoardReplyDAO;
+import com.saf.app.board.vo.BoardReplyVO;
 
 public class BoardReplyUpdateOk implements Action {
 
@@ -17,11 +17,11 @@ public class BoardReplyUpdateOk implements Action {
 		req.setCharacterEncoding("UTF-8");
 		resp.setCharacterEncoding("UTF-8");
 		
-		LostPetReplyVO reply = new LostPetReplyVO();
-		LostPetReplyDAO dao = new LostPetReplyDAO();
+		BoardReplyVO reply = new BoardReplyVO();
+		BoardReplyDAO dao = new BoardReplyDAO();
 		
-		reply.setReplyNumber(Integer.parseInt(req.getParameter("replyNumber")));
-		reply.setReplyContent(req.getParameter("replyContent"));
+		reply.setRnumber(Integer.parseInt(req.getParameter("rnumber")));
+		reply.setRcontent(req.getParameter("rcontent"));
 		
 		dao.updateReply(reply);
 		
