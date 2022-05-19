@@ -14,8 +14,8 @@
 	</classpathentry>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry exported="true" kind="lib" path="C:/aigb_9000_sck/jsp/resource/mybatis-3.5.9/mybatis-3.5.9/mybatis-3.5.9.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/aigb_9000_sck/jsp/resource/mysql-connector-java-8.0.28.jar"/>
+	<classpathentry kind="lib" path="D:/aigb_0900_kjy/jsp/resource/lib/mybatis-3.5.9.jar"/>
+	<classpathentry kind="lib" path="D:/aigb_0900_kjy/jsp/resource/lib/mysql-connector-java-8.0.27.jar"/>
 	<classpathentry exported="true" kind="lib" path="D:/aigb_0900_kjy/jsp/resource/json-simple-1.1.jar/json-simple-1.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

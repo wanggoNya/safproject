@@ -15,7 +15,7 @@ import com.saf.app.user.dao.UserDAO;
 public class UserCheckIdOk implements Action{
 
 	@Override
-	public com.saf.app.action.ActionForward execute(HttpServletRequest req, HttpServletResponse resp) throws IOException{
+	public ActionForward execute(HttpServletRequest req, HttpServletResponse resp) throws IOException{
 		
 		String uid = req.getParameter("uid");
 		UserDAO dao = new UserDAO();
@@ -23,11 +23,11 @@ public class UserCheckIdOk implements Action{
 		JSONObject obj = new JSONObject();
 		
 		if(dao.checkId(uid)) {
-			//ì•„ì´ë””ê°€ ì¤‘ë³µë˜ì—ˆì„ ë•Œ
+			//¾ÆÀÌµğ°¡ Áßº¹µÇ¾úÀ» ¶§
 //			out.print("not-ok");
 			obj.put("status", "not-ok");
 		}else {
-			//ì‚¬ìš© ê°€ëŠ¥í•œ ì•„ì´ë””ì¼ ë•Œ
+			// »ç¿ë °¡´ÉÇÑ ¾ÆÀÌµğÀÏ ¶§
 //			out.print("ok");
 			obj.put("status", "ok");
 		}

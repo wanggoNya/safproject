@@ -16,9 +16,9 @@ public class UserDAO {
 		sqlSession = sqlSessionFactory.openSession(true);
 	}
 
-	// 아이디 중복검사
+	// 아이디 중복 검사
 	public boolean checkId(String userId) {
-		return (Integer) sqlSession.selectOne("User.checkId", userId) == 1;
+		return (Integer) sqlSession.selectOne("User.checkId", uid) == 1;
 	}
 
 	// 회원가입
@@ -26,7 +26,7 @@ public class UserDAO {
 		sqlSession.insert("User.join", user);
 	}
 
-	// 로그인
+	// 濡쒓렇�씤
 	public int login(Map<String, String> loginMap) {
 		int userNumber = 0;
 		try {
@@ -37,27 +37,27 @@ public class UserDAO {
 		return userNumber;
 	}
 
-	// 회원 정보 조회
+	// �쉶�썝 �젙蹂� 議고쉶
 	public UserVO getInfo(int userNumber) {
 		return sqlSession.selectOne("User.getInfo", userNumber);
 	}
 
-	// 프로필 변경
+	// �봽濡쒗븘 蹂�寃�
 	public void updateUserProfile(UserVO user) {
 		sqlSession.update("User.updateUserProfile", user);
 	}
 
-	// 회원 정보 수정
+	// �쉶�썝 �젙蹂� �닔�젙
 	public void updateUser(UserVO user) {
 		sqlSession.update("User.updateUser", user);
 	}
 
-	// 비밀번호 변경
+	// 鍮꾨�踰덊샇 蹂�寃�
 	public void updateUpw(UserVO user) {
 		sqlSession.update("User.updateUser", user);
 	}
 
-	// 회원 탈퇴
+	// �쉶�썝 �깉�눜
 	public void delUser(UserVO user) {
 		sqlSession.update("User.updateUser", user);
 	}
