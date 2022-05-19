@@ -34,8 +34,8 @@ public class UserJoinOk implements Action{
 		dao.join(user);
 		
 		af.setRedirect(true);
-		//redirectë¡œ ì „ì†¡í•  ë•Œ contextPathê°€ ì‚¬ë¼ì§€ê¸° ë•Œë¬¸ì—
-		//ë¯¸ë¦¬ ë¶™ì—¬ë†“ê³  ì „ì†¡í•œë‹¤.
+		//redirect·Î Àü¼ÛÇÒ ¶§ contextPath°¡ »ç¶óÁö±â ¶§¹®¿¡
+		//¹Ì¸®¤Ó ºÙ¿©³õ°í Àü¼Û
 		af.setPath(req.getContextPath() + "/user/UserLogin.me");
 		
 		return af;

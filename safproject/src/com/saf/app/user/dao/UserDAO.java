@@ -17,7 +17,7 @@ public class UserDAO {
 	}
 
 	// 아이디 중복 검사
-	public boolean checkId(String userId) {
+	public boolean checkId(String uid) {
 		return (Integer) sqlSession.selectOne("User.checkId", uid) == 1;
 	}
 

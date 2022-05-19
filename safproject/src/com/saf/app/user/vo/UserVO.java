@@ -37,7 +37,7 @@ public class UserVO {
 		this.uphone = uphone;
 	}
 	public String getUimage() {
-		return upw;
+		return uimage;
 	}
 	public void setUimage(String uimage) {
 		this.uimage = uimage;
