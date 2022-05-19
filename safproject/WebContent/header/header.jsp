@@ -78,12 +78,15 @@
 <!--     <div class="lnb-bg showmenu"> -->
     </div>
     
+<<<<<<< .merge_file_a19968
     <div class="small-header">
    	<a href=""style="text-decoration:none; ">소개</a>
    	<a href=""style="text-decoration:none; ">실종동물찾기</a>
    	<a href=""style="text-decoration:none; ">전문가FAQ</a>
    	<a href=""style="text-decoration:none; ">커뮤니티</a>
     </div>
+=======
+>>>>>>> .merge_file_a23124
 </header>
 
 

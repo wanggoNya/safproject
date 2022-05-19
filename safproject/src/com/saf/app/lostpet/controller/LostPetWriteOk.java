@@ -29,19 +29,25 @@ public class LostPetWriteOk implements Action {
 		
 		//요청객체, 업로드폴더 경로, 파일의 크기, 인코딩 방식, 이름변경정책
 		MultipartRequest multi = new MultipartRequest(req, uploadFolder, fileSize, "UTF-8", new DefaultFileRenamePolicy());
-//		
-//		lostpet.setBoardTitle(multi.getParameter("boardTitle"));
-//		lostpet.setBoardContent(multi.getParameter("boardContent"));
-//		lostpet.setMemberNumber((Integer)req.getSession().getAttribute("memberNumber"));
+		
+		lostpet.setLparea1(multi.getParameter("lparea1"));
+		lostpet.setLparea2(multi.getParameter("lparea2"));
+		lostpet.setLparea3(multi.getParameter("lparea3"));
+		lostpet.setLpspecies(multi.getParameter("lpspecies"));
+		lostpet.setLpgender(multi.getParameter("lpgender"));
+		lostpet.setLpcolor(multi.getParameter("lpcolor"));
+		lostpet.setLpbreed(multi.getParameter("lpbreed"));
+		lostpet.setLptime(multi.getParameter("lptime"));
+		lostpet.setLpcontent(multi.getParameter("lpcontent"));
 		
 		//게시글 추가
 		lpDao.insert(lostpet);
 		
 		//파일 추가
-//		fDao.insert(multi, lpDao.get());
+		fDao.insert(multi, lpDao.getSeq());
 		
 		af.setRedirect(true);
-		af.setPath(req.getContextPath() + "/board/BoardListOk.bo");
+		af.setPath(req.getContextPath() + "/lostpet/LostPetListOk.lo");
 		
 		return af;
 	}
