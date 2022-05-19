@@ -21,12 +21,14 @@ public class UserJoinOk implements Action{
 		UserDAO dao = new UserDAO();
 		
 		
-		user.setUnum(Integer(req.getParameter("uNum")));
+		user.setUnum(Integer(req.getParameter("unum")));
 		user.setUid(req.getParameter("uid"));
+		user.setUpw(req.getParameter("upw"));
+		user.setUpw(req.getParameter("uimage"));
 		user.setUphone(req.getParameter("uphone"));
-		user.setUpw(req.getParameter("userPw"));
-		user.setUname(req.getParameter("userName"));
-		user.setUaddr(req.getParameter("uaddr"));
+		user.setUname(req.getParameter("uname"));
+		user.setUaddr1(req.getParameter("uaddr1"));
+		user.setUaddr2(req.getParameter("uaddr2"));
 		user.setUemail(req.getParameter("uemail"));
 		
 		dao.join(user);
